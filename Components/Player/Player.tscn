@@ -130,6 +130,7 @@ scale_amount_random = 0.31
 scale_amount_curve = SubResource( 2 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+playback_speed = 1.5
 anims/Float = SubResource( 3 )
 
 [connection signal="tween_completed" from="UnmountTween" to="." method="_on_UnmountTween_tween_completed"]

@@ -33,6 +33,7 @@ var attack_direction = Vector2(0, 0)
 onready var game = get_node("/root/Game")
 onready var anim = $AnimationPlayer
 onready var flash_light = $Visuals/Body/HandRight/Sprite/Flashlight
+onready var flash_hand = $Visuals/Body/HandRight/Sprite
 
 func _ready():
 	if !is_player:
@@ -98,12 +99,19 @@ func player_control_process(delta):
 		if anim and anim.is_playing():
 			anim.stop()
 		$Visuals.rotation_degrees = lerp($Visuals.rotation_degrees, 0, delta * 2)
-		$Visuals/Body/HandRight/Sprite.rotation_degrees = lerp($Visuals/Body/HandRight/Sprite.rotation_degrees, 0, delta * 4)
+		if flash_hand:
+			flash_hand.rotation_degrees = lerp($Visuals/Body/HandRight/Sprite.rotation_degrees, 0, delta * 4)
 	else:
 		if anim and !anim.is_playing():
 			anim.play("Float")
 		$Visuals.rotation_degrees = lerp($Visuals.rotation_degrees, rad2deg(motion_direction.angle()) + 90, delta * 2)
-		$Visuals/Body/HandRight/Sprite.rotation_degrees = lerp($Visuals/Body/HandRight/Sprite.rotation_degrees, -90, delta * 4)
+		if flash_hand:
+			flash_hand.rotation_degrees = lerp($Visuals/Body/HandRight/Sprite.rotation_degrees, -50, delta * 4)
+	
+	if motion.x < 0:
+		$Visuals.scale.x = -0.5
+	else:
+		$Visuals.scale.x = 0.5
 	
 	if !is_moving_y:
 		motion.y = lerp(motion.y, GRAVITY, 4 * delta)
@@ -111,7 +119,6 @@ func player_control_process(delta):
 	if !is_moving_x:		
 		motion.x = lerp(motion.x, 0, 4 * delta)
 		
-	#flash_light.degree(rad2deg(motion_direction.angle()) - $Visuals.rotation_degrees)
 	motion.y = min(motion.y, MAXSPEED * delta)
 
 func fish_process(delta):

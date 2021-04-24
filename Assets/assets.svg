@@ -19,6 +19,18 @@
      id="defs2">
     <linearGradient
        inkscape:collect="always"
+       id="linearGradient1393">
+      <stop
+         style="stop-color:#141414;stop-opacity:1"
+         offset="0"
+         id="stop1389" />
+      <stop
+         style="stop-color:#4897c6;stop-opacity:1"
+         offset="1"
+         id="stop1391" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
        id="linearGradient1289">
       <stop
          style="stop-color:#444444;stop-opacity:1"
@@ -110,6 +122,16 @@
        y1="244.067"
        x2="59.86549"
        y2="243.19363" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1393"
+       id="linearGradient1395"
+       x1="-157.4079"
+       y1="1037.1666"
+       x2="-157.4079"
+       y2="-31.75"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.02161988,0,0,1,-393.47186,0)" />
   </defs>
   <sodipodi:namedview
      id="base"
@@ -118,13 +140,13 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1.9200536"
-     inkscape:cx="253.9227"
-     inkscape:cy="908.1101"
+     inkscape:zoom="0.71454848"
+     inkscape:cx="-1666.068"
+     inkscape:cy="712.58954"
      inkscape:document-units="mm"
-     inkscape:current-layer="layer1"
+     inkscape:current-layer="g1353"
      inkscape:document-rotation="0"
-     showgrid="false"
+     showgrid="true"
      showguides="true"
      inkscape:guide-bbox="true"
      inkscape:window-width="1380"
@@ -141,6 +163,10 @@
        position="169.00318,200.825"
        orientation="1,0"
        id="guide24" />
+    <inkscape:grid
+       type="xygrid"
+       id="grid1359"
+       dotted="true" />
   </sodipodi:namedview>
   <metadata
      id="metadata5">
@@ -422,7 +448,10 @@
        style="fill:url(#linearGradient1337);fill-opacity:1;stroke:none;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        d="m 90.762074,239.19629 -2.461313,-1.74674 c 0,0 -1.192898,0.1656 -1.984928,1.03216 -0.79203,0.86656 -1.298088,2.59196 -1.826136,4.44624 -0.528048,1.85428 -1.111562,6.66937 -1.111562,6.66937 l 5.240216,1.03216 z"
        id="path1311"
-       sodipodi:nodetypes="cczzccc" />
+       sodipodi:nodetypes="cczzccc"
+       inkscape:export-filename="/Users/jh/code/my/games/LD48/Components/Player/body.png"
+       inkscape:export-xdpi="122"
+       inkscape:export-ydpi="122" />
     <path
        style="fill:#b3b3b3;stroke:none;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        d="m 106.95529,242.14581 c -0.535,-0.37702 -0.85245,-0.62328 -1.58795,-0.39699 -0.73549,0.22629 -1.97903,1.3231 -1.98493,2.22313 -0.006,0.90003 0.88765,1.46238 1.58795,1.82613 0.70029,0.36375 1.64559,0.60573 2.30252,0.23819 0.65693,-0.36754 1.00531,-1.23812 0.95276,-1.98493 -0.0525,-0.74681 -0.73536,-1.52851 -1.27035,-1.90553 z"
@@ -432,28 +461,46 @@
        style="fill:#000000;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        d="m 87.212205,218.18999 c -2.80255,2.3823 -4.006087,4.74116 -4.559846,6.98227 -0.553759,2.24111 -0.595171,4.94542 -0.142494,6.83977 0.452677,1.89435 0.924257,2.94151 2.279923,4.27486 1.355666,1.33335 3.514002,2.40837 5.842304,2.9924 2.328302,0.58403 5.584058,0.46038 7.837238,0.14249 2.25318,-0.31789 3.91954,-0.62701 5.55731,-1.70994 1.63778,-1.08293 2.97086,-2.40349 3.84737,-4.55985 0.87652,-2.15636 1.17782,-5.41824 0.56999,-7.97973 -0.60784,-2.56149 -1.93853,-5.06558 -3.98987,-6.69728 -2.05134,-1.6317 -5.231044,-2.22641 -7.552249,-2.42242 -3.119334,-0.0421 -6.887126,-0.24487 -9.689676,2.13743 z"
        id="path1315"
-       sodipodi:nodetypes="zzzzzzzzzzcz" />
+       sodipodi:nodetypes="zzzzzzzzzzcz"
+       inkscape:export-filename="/Users/jh/code/my/games/LD48/Components/Player/body.png"
+       inkscape:export-xdpi="122"
+       inkscape:export-ydpi="122" />
     <path
        style="fill:#f2f2f2;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        d="m 105.4516,222.46485 c -2.43395,-0.59371 -8.456453,-0.67057 -10.687145,0 -1.690617,0.55225 -2.468281,1.11355 -3.419888,2.27993 -0.951607,1.16638 -1.732133,2.93758 -1.852438,4.55984 -0.120305,1.62226 0.07792,3.47016 1.139963,4.70234 1.062045,1.23218 2.927555,1.46247 4.559847,1.85244 1.632292,0.38997 3.446985,0.55221 5.129831,0.42749 1.68284,-0.12472 3.56647,-0.18544 4.84483,-1.13997 1.27837,-0.95453 1.88562,-2.41735 2.27993,-3.98986 0.39431,-1.57251 0.24005,-3.6541 -0.1425,-5.12983 -0.38255,-1.47573 -0.71526,-2.81723 -1.85243,-3.56238 z"
        id="path1317"
-       sodipodi:nodetypes="cczzzzzzzzc" />
+       sodipodi:nodetypes="cczzzzzzzzc"
+       inkscape:export-filename="/Users/jh/code/my/games/LD48/Components/Player/body.png"
+       inkscape:export-xdpi="122"
+       inkscape:export-ydpi="122" />
     <path
        style="fill:#ffffff;stroke:none;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        d="m 91.635445,228.55706 0.714573,-2.46131 1.587945,-1.42915 2.302517,-0.95277 h 1.587945 l -0.238191,0.39699 -2.302518,0.63517 -1.826136,1.19096 -1.111562,1.66734 z"
-       id="path1319" />
+       id="path1319"
+       inkscape:export-filename="/Users/jh/code/my/games/LD48/Components/Player/body.png"
+       inkscape:export-xdpi="122"
+       inkscape:export-ydpi="122" />
     <path
        style="fill:#ffffff;fill-opacity:0.459677;stroke:none;stroke-width:0.356208px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        d="m 85.238812,223.78758 c 0,0 0.685564,-2.28221 1.215386,-3.23315 0.529822,-0.95094 1.173069,-1.47152 1.99511,-2.06172 0.822041,-0.5902 2.0478,-1.18393 2.892906,-1.37449 0.845106,-0.19056 1.995111,0 1.995111,0 0,0 0.170717,0.17844 -0.299266,0.57271 -0.469983,0.39427 -2.018187,0.46674 -2.892907,0.91631 -0.87472,0.44957 -1.668734,1.01482 -2.294376,1.7181 -0.848586,1.25494 -1.762464,2.20879 -2.611964,3.46224 z"
        id="path1321"
-       sodipodi:nodetypes="czzzczzcc" />
+       sodipodi:nodetypes="czzzczzcc"
+       inkscape:export-filename="/Users/jh/code/my/games/LD48/Components/Player/body.png"
+       inkscape:export-xdpi="122"
+       inkscape:export-ydpi="122" />
     <path
        style="fill:#000000;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        d="m 90.285691,239.27568 -1.66734,9.68646 c 0,0 1.827869,1.45052 6.192981,1.50854 4.365112,0.058 6.669368,-1.19095 6.669368,-1.19095 L 99.892752,238.6405 Z"
        id="path1323"
-       sodipodi:nodetypes="cczccc" />
+       sodipodi:nodetypes="cczccc"
+       inkscape:export-filename="/Users/jh/code/my/games/LD48/Components/Player/body.png"
+       inkscape:export-xdpi="122"
+       inkscape:export-ydpi="122" />
     <g
-       id="g1341">
+       id="g1341"
+       inkscape:export-filename="/Users/jh/code/my/games/LD48/Components/Player/leg.png"
+       inkscape:export-xdpi="122"
+       inkscape:export-ydpi="122">
       <path
          style="fill:#b3b3b3;stroke:none;stroke-width:0.195737px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
          d="m 88.144317,257.441 c 0,0 -0.690901,4.04809 -1.340053,5.61265 -0.649152,1.56455 -2.553133,2.93485 -2.27809,3.75892 0.275043,0.82406 0.620491,0.50838 1.00504,0.56641 0.384549,0.058 0.72803,-0.31072 1.072041,-0.20597 0.344012,0.10476 0.20029,0.66522 0.603026,0.7209 0.402737,0.0556 0.667404,-0.63322 1.072042,-0.6179 0.404637,0.0153 0.488096,0.51463 0.804032,0.56641 0.315936,0.0518 0.48878,-0.22319 0.804031,-0.20597 0.31525,0.0172 0.594027,0.40334 0.938038,0.36043 0.344011,-0.0429 0.358724,-0.007 0.737028,-0.56641 0.378304,-0.55907 0.693191,-1.66767 0.670027,-2.93505 -0.02316,-1.26737 -0.798217,-3.37612 -1.206048,-4.5313 -0.407831,-1.15518 -1.072041,-2.42013 -1.072041,-2.42013 -0.603024,-0.83714 -1.206049,-0.61809 -1.809073,-0.10299 z"
@@ -467,14 +514,20 @@
     </g>
     <path
        style="fill:#b3b3b3;stroke:none;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 79.812893,241.76257 c -0.534995,-0.37702 -0.852448,-0.62328 -1.587944,-0.39699 -0.735496,0.22629 -1.979032,1.3231 -1.984931,2.22313 -0.0059,0.90003 0.887649,1.46238 1.587945,1.82613 0.700296,0.36375 1.645589,0.60573 2.30252,0.23819 0.656931,-0.36754 1.005309,-1.23812 0.952765,-1.98493 -0.05254,-0.74681 -0.73536,-1.52851 -1.270355,-1.90553 z"
+       d="m 77.056894,249.61717 c -0.534995,-0.37702 -0.852448,-0.62328 -1.587944,-0.39699 -0.735496,0.22629 -1.979032,1.3231 -1.984931,2.22313 -0.0059,0.90003 0.887649,1.46238 1.587945,1.82613 0.700296,0.36375 1.645589,0.60573 2.30252,0.23819 0.656931,-0.36754 1.005309,-1.23812 0.952765,-1.98493 -0.05254,-0.74681 -0.73536,-1.52851 -1.270355,-1.90553 z"
        id="path1329"
-       sodipodi:nodetypes="zzzzzzz" />
+       sodipodi:nodetypes="zzzzzzz"
+       inkscape:export-filename="/Users/jh/code/my/games/LD48/Components/Player/hand.png"
+       inkscape:export-xdpi="122.62482"
+       inkscape:export-ydpi="122.62482" />
     <path
        style="fill:#1a1a1a;stroke:none;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        d="m 83.57708,248.25312 c 0,0 2.246743,0.84286 3.106984,1.01158 0.860241,0.16872 1.987026,0.14451 1.987026,0.14451 l -0.108384,1.19222 c 0,0 -2.486831,-0.18149 -3.359877,-0.39741 -0.873046,-0.21592 -1.878643,-0.72255 -1.878643,-0.72255 z"
        id="path1331"
-       sodipodi:nodetypes="czcczcc" />
+       sodipodi:nodetypes="czcczcc"
+       inkscape:export-filename="/Users/jh/code/my/games/LD48/Components/Player/body.png"
+       inkscape:export-xdpi="122"
+       inkscape:export-ydpi="122" />
     <path
        style="fill:#b3b3b3;stroke:none;stroke-width:0.195737px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        d="m 52.490755,267.80553 c 0,0 4.100962,-0.21561 5.769933,0.0738 1.668962,0.28945 3.424188,1.84574 4.167667,1.39632 0.74347,-0.44942 0.359591,-0.71704 0.331693,-1.10494 -0.02793,-0.3879 -0.463119,-0.64195 -0.436531,-1.00057 0.0266,-0.35863 0.604942,-0.34159 0.570754,-0.74671 -0.03427,-0.40511 -0.764411,-0.51193 -0.83839,-0.91005 -0.074,-0.3981 0.394783,-0.58926 0.375866,-0.90885 -0.0189,-0.3196 -0.32515,-0.42778 -0.377631,-0.73911 -0.0525,-0.31132 0.262934,-0.66814 0.145472,-0.99431 -0.117452,-0.32618 -0.08566,-0.34842 -0.714535,-0.59454 -0.62854,-0.24619 -1.779239,-0.30975 -3.010545,-0.009 -1.231297,0.30112 -3.118166,1.52065 -4.155479,2.17238 -1.037313,0.65173 -2.12537,1.57769 -2.12537,1.57769 -0.684152,0.77225 -0.337934,1.3124 0.297096,1.78748 z"
@@ -485,5 +538,93 @@
        d="m 52.229468,263.58411 -0.317587,2.9377 c 0.688109,0.47224 1.376218,1.38677 2.064327,0.31759 v -3.33469 c -0.582247,-1.6164 -1.164493,-1.29552 -1.74674,0.0794 z"
        id="path1345"
        sodipodi:nodetypes="ccccc" />
+    <g
+       id="g1353">
+      <g
+         id="g1357"
+         transform="rotate(61.061962,62.257398,240.41547)"
+         inkscape:export-filename="/Users/jh/code/my/games/LD48/Components/Flashlight/flashlight.png"
+         inkscape:export-xdpi="122"
+         inkscape:export-ydpi="122">
+        <path
+           style="fill:#000000;stroke:none;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           d="m 61.045386,239.49635 -2.557556,4.34895 c 0.147299,0.8173 0.869469,1.05973 1.653601,1.2402 l 2.833153,-4.48675 c 0,0 2.904536,0.77155 3.048112,-1.74187 0.143576,-2.51342 -3.373252,-3.69221 -4.685234,-2.83256 -1.311982,0.85964 -0.292076,3.47203 -0.292076,3.47203 z"
+           id="path1347"
+           sodipodi:nodetypes="cccczzc" />
+        <path
+           style="fill:#ffffff;stroke:none;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           d="m 64.714572,236.77184 c -1.577788,-1.08776 -3.470225,-0.99435 -3.69933,0.18193 -0.02977,1.08068 0.452602,1.90491 1.239214,2.43309 0.786612,0.52817 2.638826,0.96606 3.173981,0.37116 0.375656,-0.80515 0.863923,-1.89842 -0.713865,-2.98618 z"
+           id="path1349"
+           sodipodi:nodetypes="zczcz" />
+      </g>
+      <rect
+         style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.665001;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="rect1361"
+         width="3.96875"
+         height="3.96875"
+         x="11.90625"
+         y="166.6875"
+         inkscape:export-xdpi="640"
+         inkscape:export-ydpi="640" />
+      <path
+         style="fill:#000000;stroke:none;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         d="m 15.875,166.6875 h 3.96875 l -0.79375,0.79375 -1.322917,0.79375 -0.264583,0.79375 -0.79375,0.52917 -0.79375,1.05833 z"
+         id="path1363"
+         sodipodi:nodetypes="cccccccc"
+         inkscape:export-xdpi="640"
+         inkscape:export-ydpi="640" />
+      <path
+         style="fill:#000000;stroke:none;stroke-width:0.26458300000000001px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         d="m 15.875,170.65625 0.264583,0.79375 0.79375,0.26458 v 0.52917 l 0.529167,0.79375 0.529166,0.26458 0.79375,0.52917 0.529167,0.26458 0.529167,0.52917 H 15.875 v -3.96875"
+         id="path1365"
+         inkscape:export-xdpi="640"
+         inkscape:export-ydpi="640" />
+      <path
+         style="fill:#000000;stroke:none;stroke-width:0.26458300000000001px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         d="m 19.84375,174.625 3.96875,0 0,-3.96875 -0.529167,0.26458 V 171.45 l -0.264583,0.26458 -0.529167,0.26459 -0.264583,0.26458 -0.264584,0.26458 v 0.52917 l -0.529166,0.26458 v 0.26458 l -0.529167,0.52917 H 20.6375 l -0.264584,0.26458 z"
+         id="path1367"
+         sodipodi:nodetypes="cccccccccccccccc"
+         inkscape:export-xdpi="640"
+         inkscape:export-ydpi="640" />
+      <path
+         style="fill:#000000;stroke:none;stroke-width:0.26458300000000001px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;fill-opacity:1"
+         d="m 23.8125,170.65625 v -3.96875 h -3.96875 l 0.529166,0.52916 1.058334,0.26459 v 0.52916 l 0.264583,0.52917 H 22.225 l 0.264583,0.52917 0.529167,0.26458 v 0.79375 l 0.529166,0.26458 z"
+         id="path1369"
+         inkscape:export-xdpi="640"
+         inkscape:export-ydpi="640" />
+      <path
+         style="fill:#000000;stroke:none;stroke-width:0.26458300000000001px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         d="M 11.90625,174.625 H 15.875 l -0.264584,0.79375 v 0.52916 0.52917 l -0.264583,0.52917 v 0.52916 L 15.610416,177.8 v 0.52916 L 15.875,178.59375 H 11.90625 V 174.625"
+         id="path1379"
+         inkscape:export-xdpi="640"
+         inkscape:export-ydpi="640" />
+      <path
+         style="fill:#000000;stroke:none;stroke-width:0.26458300000000001px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         d="m 11.90625,170.65625 0.264583,0.52916 0.79375,-0.26458 h 0.529167 l 0.529166,0.26458 0.79375,-0.26458 h 0.264584 l 0.79375,-0.26458 v 3.96875 h -3.96875 z"
+         id="path1381"
+         inkscape:export-xdpi="640"
+         inkscape:export-ydpi="640" />
+      <path
+         style="fill:#000000;stroke:none;stroke-width:0.26458300000000001px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         d="m 19.84375,174.625 0.264583,0.52916 v 0.26459 l -0.264583,0.52916 0.264583,0.26459 0.264583,0.52916 v 0.52917 l -0.264583,0.26458 v 0.26459 0.26458 0.26458 l -0.264583,0.26459 H 23.8125 V 174.625 h -3.96875"
+         id="path1383"
+         inkscape:export-xdpi="640"
+         inkscape:export-ydpi="640" />
+      <path
+         style="fill:#000000;stroke:none;stroke-width:0.26458300000000001px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         d="m 15.875,174.625 h 3.96875 v 3.96875 l -0.529167,-0.26459 h -0.529167 l -0.529166,0.26459 -0.529167,-0.26459 h -0.529167 l -0.529166,-0.26458 -0.264584,0.26458 -0.529166,0.26459 z"
+         id="path1385"
+         inkscape:export-xdpi="640"
+         inkscape:export-ydpi="640" />
+      <rect
+         style="fill:url(#linearGradient1395);fill-opacity:1;stroke:none;stroke-width:0.0977799;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="rect1387"
+         width="3.6609664"
+         height="1068.9166"
+         x="-402.16666"
+         y="-31.75"
+         inkscape:export-xdpi="237.62378"
+         inkscape:export-ydpi="237.62378" />
+    </g>
   </g>
 </svg>
