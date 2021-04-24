@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Components/Player/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://icon.png" type="Texture" id=2]
@@ -6,13 +6,13 @@
 [ext_resource path="res://Components/Collectable/Collectabe.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Components/Fish/Fish.tscn" type="PackedScene" id=5]
 
-[sub_resource type="RectangleShape2D" id=2]
+[sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 36.6645, 35.1246 )
 
-[sub_resource type="OccluderPolygon2D" id=3]
+[sub_resource type="OccluderPolygon2D" id=2]
 polygon = PoolVector2Array( -35.4693, -35.1246, -34.8045, 35.6795, 36.6645, 34.0174, 35.9996, -35.457 )
 
-[sub_resource type="Environment" id=1]
+[sub_resource type="Environment" id=3]
 background_mode = 4
 background_energy = 0.0
 glow_enabled = true
@@ -20,6 +20,9 @@ glow_bloom = 0.11
 glow_blend_mode = 0
 adjustment_brightness = 0.95
 adjustment_saturation = 0.7
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 10, 1255.55 )
 
 [node name="Game" type="Node2D"]
 script = ExtResource( 3 )
@@ -55,17 +58,18 @@ texture = ExtResource( 2 )
 [node name="Camera" type="Camera2D" parent="Player"]
 position = Vector2( 3.5, 84 )
 current = true
+zoom = Vector2( 2, 2 )
 smoothing_enabled = true
-smoothing_speed = 1.0
+smoothing_speed = 4.0
 
 [node name="Rock" type="StaticBody2D" parent="."]
 position = Vector2( 406.874, 164.212 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Rock"]
-shape = SubResource( 2 )
+shape = SubResource( 1 )
 
 [node name="LightOccluder2D" type="LightOccluder2D" parent="Rock"]
-occluder = SubResource( 3 )
+occluder = SubResource( 2 )
 
 [node name="Sprite" type="Sprite" parent="Rock"]
 texture = ExtResource( 2 )
@@ -78,6 +82,18 @@ position = Vector2( -0.471375, 0.471375 )
 color = Color( 0.482353, 0.482353, 0.482353, 1 )
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
-environment = SubResource( 1 )
+environment = SubResource( 3 )
 
 [node name="Fish" parent="." instance=ExtResource( 5 )]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2( -534.75, 97.8628 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+shape = SubResource( 4 )
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="."]
+position = Vector2( 1307.17, 76.8922 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
+shape = SubResource( 4 )
