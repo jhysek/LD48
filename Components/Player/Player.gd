@@ -15,6 +15,8 @@ export var GRAVITY = 50
 export var SWIM_SPEED = 15000
 export var ATTACK_SPEED = 10000
 export var SPEED = 15000
+export var BOOST = 30000
+export var BOOST_CONSUMPTION = 100
 export var MAXSPEED = 15050
 export var OXYGEN_CAPACITY = 300
 #################################################
@@ -64,8 +66,18 @@ func _physics_process(delta):
 	if state == State.ATTACKING:
 		fish_attack_process(delta)
 		
-	if state != State.DEAD:
+	if is_in_group("Player") and state != State.DEAD:
 		player_consume_oxygen(delta)
+		
+	if state == State.DEAD:
+		motion.x = lerp(motion.x, 0, delta)
+		motion.y = lerp(motion.y, GRAVITY * delta, delta)
+		
+		if is_in_group("Player"):
+			$AnimationPlayer.stop()
+			$Visuals/Body/BoostParticles.emitting = false
+			$CPUParticles2D.emitting = false
+			rotation_degrees += delta * 30
 	
 	if state != State.MOUNTED:
 		motion = move_and_slide(motion)
@@ -74,24 +86,41 @@ func _physics_process(delta):
 func player_control_process(delta):
 	var is_moving_y = false
 	var is_moving_x = false
+	var boost = 1
+	var target_degrees = 0
+	
+	if is_in_group("Player"):
+		if Input.is_action_pressed("ui_accept"):
+			boost = BOOST * delta
+			oxygen_level -= delta * BOOST_CONSUMPTION
+			game.update_oxygen_indicator(oxygen_level / OXYGEN_CAPACITY * 100)
+			$Visuals/Body/BoostParticles.emitting = true
+		else:
+			boost = 1
+			$Visuals/Body/BoostParticles.emitting = false
 	
 	if Input.is_action_pressed('ui_left'):
-		motion.x = -SPEED * delta
+		motion.x = -SPEED * delta - boost
 		motion.y = 0
+		target_degrees = -90
 		is_moving_x = true
 		
 	if Input.is_action_pressed('ui_right'):
-		motion.x = SPEED * delta
+		motion.x = SPEED * delta + boost
 		motion.y = 0
+		target_degrees = 90
 		is_moving_x = true
 	
 	if Input.is_action_pressed('ui_up'):
-		motion.y = -SPEED * delta
+		motion.y = -SPEED * delta - boost	
+		target_degrees = 0
 		is_moving_y = true
 	
 	if Input.is_action_pressed('ui_down'):
-		motion.y = SPEED * delta
+		motion.y = SPEED * delta + boost	
+		target_degrees = 180
 		is_moving_y = true
+
 
 	var motion_direction = motion.normalized()
 	
@@ -104,22 +133,29 @@ func player_control_process(delta):
 	else:
 		if anim and !anim.is_playing():
 			anim.play("Float")
-		$Visuals.rotation_degrees = lerp($Visuals.rotation_degrees, rad2deg(motion_direction.angle()) + 90, delta * 2)
+			
+		var target_deg = rad2deg(motion_direction.angle()) + 90
+		if $Visuals.scale.x < 0 and target_deg > 220:
+			target_deg = target_deg - 360
+			
+		$Visuals.rotation_degrees = lerp($Visuals.rotation_degrees, target_deg, delta * 4)
+		
 		if flash_hand:
-			flash_hand.rotation_degrees = lerp($Visuals/Body/HandRight/Sprite.rotation_degrees, -50, delta * 4)
+			flash_hand.rotation_degrees = lerp($Visuals/Body/HandRight/Sprite.rotation_degrees, -70, delta * 4)
 	
 	if motion.x < 0:
-		$Visuals.scale.x = -0.5
+		$Visuals.scale.x = -0.5 #lerp($Visuals.scale.x, -0.5, delta * 10)
 	else:
-		$Visuals.scale.x = 0.5
+		 $Visuals.scale.x =  0.5 #lerp($Visuals.scale.x, 0.5, delta * 10)
 	
+
 	if !is_moving_y:
 		motion.y = lerp(motion.y, GRAVITY, 4 * delta)
 		
 	if !is_moving_x:		
 		motion.x = lerp(motion.x, 0, 4 * delta)
 		
-	motion.y = min(motion.y, MAXSPEED * delta)
+	motion.y = min(motion.y, MAXSPEED * delta + boost)
 
 func fish_process(delta):
 	motion.x = direction.x * SWIM_SPEED * delta
@@ -173,11 +209,11 @@ func player_consume_oxygen(delta):
 	else:
 		oxygen_level -= delta
 	
-	oxygen_redraw_cooldown -= delta
-	if oxygen_redraw_cooldown <= 0:
-		if game:
-			game.update_oxygen_indicator(oxygen_level / OXYGEN_CAPACITY * 100)
-		oxygen_redraw_cooldown = 1
+	print("OXYGEN: ", oxygen_level)
+	#oxygen_redraw_cooldown -= delta
+	#if oxygen_redraw_cooldown <= 0:
+	game.update_oxygen_indicator(oxygen_level / OXYGEN_CAPACITY * 100)
+	#	oxygen_redraw_cooldown = 1
 	
 	
 func die():
