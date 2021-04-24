@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://Components/Player/body.png" type="Texture" id=1]
 [ext_resource path="res://Components/Player/Player.gd" type="Script" id=2]
@@ -7,11 +7,14 @@
 [ext_resource path="res://Components/Player/hand.png" type="Texture" id=5]
 [ext_resource path="res://Components/Player/leg.png" type="Texture" id=6]
 [ext_resource path="res://Components/Flashlight/flashlight.png" type="Texture" id=7]
+[ext_resource path="res://Components/Player/particle.png" type="Texture" id=8]
+[ext_resource path="res://Components/Player/bubbles2.wav" type="AudioStream" id=9]
+[ext_resource path="res://Components/Player/breathing.wav" type="AudioStream" id=10]
 
-[sub_resource type="Curve" id=2]
+[sub_resource type="Curve" id=1]
 _data = [ Vector2( 0.0860958, 0.259399 ), 0.0, -0.0745699, 0, 0, Vector2( 0.977273, 0.595238 ), -0.424602, 0.0, 0, 0 ]
 
-[sub_resource type="CircleShape2D" id=1]
+[sub_resource type="CircleShape2D" id=2]
 radius = 38.6884
 
 [sub_resource type="Animation" id=3]
@@ -66,6 +69,10 @@ tracks/3/keys = {
 "values": [ Vector2( -19.6152, 77.6902 ), Vector2( 16.5775, 75.4966 ) ]
 }
 
+[sub_resource type="Gradient" id=4]
+offsets = PoolRealArray( 0.594096, 1 )
+colors = PoolColorArray( 0.348731, 0, 0, 1, 0.587344, 0.176818, 0.176818, 1 )
+
 [node name="Player" type="KinematicBody2D" groups=[
 "Eatable",
 "Player",
@@ -96,6 +103,8 @@ offset = Vector2( 19.4172, 1.51577 )
 [node name="Flashlight" parent="Visuals/Body/HandRight/Sprite" instance=ExtResource( 3 )]
 position = Vector2( -14.7821, -0.93438 )
 scale = Vector2( 2, 2 )
+light = true
+rays_enabled = false
 
 [node name="LegLeft" type="Sprite" parent="Visuals/Body"]
 position = Vector2( -19.6152, 77.6902 )
@@ -128,10 +137,10 @@ gravity = Vector2( 0, -98 )
 initial_velocity = 180.72
 initial_velocity_random = 0.16
 scale_amount_random = 0.31
-scale_amount_curve = SubResource( 2 )
+scale_amount_curve = SubResource( 1 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource( 1 )
+shape = SubResource( 2 )
 
 [node name="UnmountTween" type="Tween" parent="."]
 
@@ -149,10 +158,44 @@ local_coords = false
 texture = ExtResource( 4 )
 gravity = Vector2( 0, -98 )
 scale_amount_random = 0.31
-scale_amount_curve = SubResource( 2 )
+scale_amount_curve = SubResource( 1 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 playback_speed = 1.5
 anims/Float = SubResource( 3 )
 
+[node name="Blood" type="CPUParticles2D" parent="."]
+modulate = Color( 1, 1, 1, 0.584314 )
+emitting = false
+amount = 40
+lifetime = 3.0
+one_shot = true
+explosiveness = 0.6
+local_coords = false
+texture = ExtResource( 8 )
+emission_shape = 2
+emission_rect_extents = Vector2( 12, 10 )
+spread = 120.9
+initial_velocity = 100.0
+initial_velocity_random = 0.17
+linear_accel = -100.0
+linear_accel_random = 0.22
+scale_amount = 2.0
+color_ramp = SubResource( 4 )
+anim_speed = 23.13
+
+[node name="SfxTimer" type="Timer" parent="."]
+wait_time = 5.0
+
+[node name="Sfx" type="Node" parent="."]
+
+[node name="bubble1" type="AudioStreamPlayer" parent="Sfx"]
+stream = ExtResource( 10 )
+volume_db = -10.0
+
+[node name="bubble2" type="AudioStreamPlayer" parent="Sfx"]
+stream = ExtResource( 9 )
+volume_db = -10.0
+
 [connection signal="tween_completed" from="UnmountTween" to="." method="_on_UnmountTween_tween_completed"]
+[connection signal="timeout" from="SfxTimer" to="." method="_on_Timer_timeout"]

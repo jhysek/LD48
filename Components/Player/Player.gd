@@ -11,6 +11,7 @@ enum State {
 
 ### settings ####################################
 export var is_player = true
+export var agressive = false
 export var GRAVITY = 50
 export var SWIM_SPEED = 15000
 export var ATTACK_SPEED = 10000
@@ -24,6 +25,7 @@ export var OXYGEN_CAPACITY = 300
 var motion = Vector2(0,0) 
 var attack_target
 var is_moving = false
+var eaten = false
 var mounted_on 
 var direction = Vector2(1, 0)
 var state = State.CONTROLLED
@@ -43,10 +45,14 @@ func _ready():
 		flash_light = $Flashlight
 	else:
 		state = State.CONTROLLED
+		_on_Timer_timeout()
+		$SfxTimer.start()
 		
 	set_physics_process(true)
 	
-
+func alive():
+	return state != State.DEAD
+	
 ################################################################################
 # PROCESSESS
 ################################################################################
@@ -62,9 +68,7 @@ func _physics_process(delta):
 	
 	if state == State.MOUNTED:
 		player_mounted_process(delta)
-		
-	if state == State.ATTACKING:
-		fish_attack_process(delta)
+
 		
 	if is_in_group("Player") and state != State.DEAD:
 		player_consume_oxygen(delta)
@@ -73,13 +77,10 @@ func _physics_process(delta):
 		motion.x = lerp(motion.x, 0, delta)
 		motion.y = lerp(motion.y, GRAVITY * delta, delta)
 		
-		if is_in_group("Player"):
-			$AnimationPlayer.stop()
-			$Visuals/Body/BoostParticles.emitting = false
-			$CPUParticles2D.emitting = false
+		if is_in_group("Player") and !eaten:
 			rotation_degrees += delta * 30
 	
-	if state != State.MOUNTED:
+	if state != State.MOUNTED and !eaten:
 		motion = move_and_slide(motion)
 
 
@@ -175,8 +176,12 @@ func player_mounted_process(delta):
 
 ################################################################################
 func object_seen(object):
-	if [State.FISH, State.ATTACKING].has(state):
+	print("I can see something ", state)
+	if [State.FISH].has(state):
+		state = State.ATTACKING
+		print("I can see something.. ", state)
 		if object.is_in_group("Eatable") and object.state != object.State.DEAD:
+			print(" And it's eatable...")
 			attack(object)
 
 	if state == State.CONTROLLED:
@@ -192,11 +197,11 @@ func cannot_see_a_shit():
 		flash_light.degree(0)
 
 func attack(object):
-	attack_direction = position.direction_to(object.position)
-	
-	flash_light.degree(rad2deg(attack_direction.angle()), 1)
-	 
-	print("ATTACKING: ", object)
+	attack_direction = position.direction_to(object.position)	 
+	print("ATTACK: ", attack_direction)
+	$Tween.interpolate_property(self, 'position', position, object.position + position.direction_to(object.position) * 50, 0.6, Tween.TRANS_EXPO, Tween.EASE_OUT)
+	$Tween.start()
+	$Sfx/attack1.play()
 
 func add_oxygen(amount):
 	oxygen_level = min(OXYGEN_CAPACITY, oxygen_level + amount)
@@ -209,20 +214,34 @@ func player_consume_oxygen(delta):
 	else:
 		oxygen_level -= delta
 	
-	print("OXYGEN: ", oxygen_level)
-	#oxygen_redraw_cooldown -= delta
-	#if oxygen_redraw_cooldown <= 0:
-	game.update_oxygen_indicator(oxygen_level / OXYGEN_CAPACITY * 100)
-	#	oxygen_redraw_cooldown = 1
+	oxygen_redraw_cooldown -= delta
+	if oxygen_redraw_cooldown <= 0:
+		game.update_oxygen_indicator(oxygen_level / OXYGEN_CAPACITY * 100)
+		oxygen_redraw_cooldown = 1
 	
 	
-func die():
+func die(is_eaten = false):
+	game.player_died()
+	
+	$SfxTimer.stop()
+	$AnimationPlayer.stop()
+	$Visuals/Body/BoostParticles.emitting = false
+	$CPUParticles2D.emitting = false
 	motion.x = 0
 	state = State.DEAD
+	
+	if is_eaten:
+		eaten = true
+		$Blood.emitting = true
 
 func eat(victim):
 	print(victim, " has been eaten... ")
-	victim.die()
+	victim.die(true)
+	var new_parent = self
+	game.remove_child(victim)
+	new_parent.add_child(victim)
+	victim.position = Vector2(0,0)
+	
 	
 func mount(driver):
 	print("mounting the player on ", driver)
@@ -258,12 +277,12 @@ func turn_around():
 		flash_light.turn_around()
 	
 func _on_HeadArea_body_entered(body):
-	if state == State.FISH:
-		
-		if body.is_in_group("Player"):
+	if [State.ATTACKING, State.FISH].has(state):
+		if agressive and body.is_in_group("Player") and !body.eaten:
+			$AnimationPlayer.play("Attack")
 			eat(body)	
 			
-		if body is StaticBody2D:
+		if body is TileMap:
 			turn_around()
 			print("A WALL!")
 
@@ -279,3 +298,9 @@ func _on_UnmountTween_tween_completed(object, key):
 		collision_layer = 1
 		collision_mask = 1
 		flash_light.turn_on()
+
+
+func _on_Timer_timeout():
+	var sfx = $Sfx.get_node("bubble1") # + str(randi() % 2 + 1))
+	sfx.pitch_scale = (randi() % 10 - 5) / 10 + 1
+	sfx.play()

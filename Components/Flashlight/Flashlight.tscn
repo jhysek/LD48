@@ -25,11 +25,11 @@ rotation = 0.00403269
 script = ExtResource( 3 )
 
 [node name="Light2D" type="Light2D" parent="."]
-position = Vector2( 0.338265, 3.31626 )
+position = Vector2( -21.3221, -2.24109 )
 texture = ExtResource( 1 )
 offset = Vector2( 346.38, 4.48808 )
-texture_scale = 2.0
-mode = 2
+texture_scale = 1.8
+energy = 2.0
 shadow_enabled = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]

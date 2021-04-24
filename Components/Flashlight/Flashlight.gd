@@ -2,6 +2,9 @@ extends Node2D
 
 enum Directions {DOWN, UP, LEFT, RIGHT}
 
+export var light = false
+export var rays_enabled  = true
+
 var direction = Directions.LEFT
 var target_degree = 0
 var enabled = true
@@ -10,16 +13,22 @@ var saw_something = false
 var rays = []
 
 func _ready():
-	rays = [$Ray1, $Ray2, $Ray3]
+	$Light2D.enabled = light
 	
-	set_physics_process(true)
-	
+	if rays_enabled:
+		rays = [$Ray1, $Ray2, $Ray3]
+		set_physics_process(true)
+	else:
+		$Ray1.enabled = false
+		$Ray2.enabled = false
+		$Ray3.enabled = false
+		
 func _physics_process(delta):
-	if enabled:
+	if rays_enabled and enabled:
 		for ray in rays:
 			if ray.is_colliding():
 				var collider = ray.get_collider()
-				if collider.is_in_group("Eatable"):
+				if collider.is_in_group("Eatable") and collider.alive():
 					saw_something = true
 					get_parent().object_seen(collider)
 					return
