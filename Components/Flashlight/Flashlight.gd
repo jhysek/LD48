@@ -30,12 +30,12 @@ func _physics_process(delta):
 				var collider = ray.get_collider()
 				if collider.is_in_group("Eatable") and collider.alive():
 					saw_something = true
-					get_parent().object_seen(collider)
+					get_parent().get_parent().object_seen(collider)
 					return
 
 		if saw_something:				
 			saw_something = false
-			get_parent().cannot_see_a_shit()
+			get_parent().get_parent().cannot_see_a_shit()
 		
 func turn_off():
 	enabled = false

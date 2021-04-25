@@ -1,0 +1,104 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://Assets/bg.png" type="Texture" id=1]
+[ext_resource path="res://Assets/BEBAS___.otf" type="DynamicFontData" id=2]
+[ext_resource path="res://Components/Player/Player.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scenes/Finish.gd" type="Script" id=4]
+[ext_resource path="res://Components/BigScaryFish/Fish.tscn" type="PackedScene" id=5]
+
+[sub_resource type="DynamicFont" id=1]
+size = 100
+use_mipmaps = true
+use_filter = true
+font_data = ExtResource( 2 )
+
+[sub_resource type="Animation" id=2]
+resource_name = "FadeOut"
+length = 5.0
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 3.2, 4, 5 ),
+"transitions": PoolRealArray( 1, 1, 0.353553, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 0.607843, 0, 0, 1 ), Color( 0, 0, 0, 1 ) ]
+}
+tracks/1/type = "method"
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 4.4 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "remove_fish"
+} ]
+}
+
+[sub_resource type="Environment" id=3]
+background_mode = 4
+glow_enabled = true
+glow_intensity = 2.1
+glow_strength = 0.99
+glow_bloom = 0.54
+glow_blend_mode = 0
+adjustment_enabled = true
+adjustment_brightness = 0.46
+adjustment_contrast = 2.27
+adjustment_saturation = 0.01
+
+[node name="Game" type="Node2D"]
+script = ExtResource( 4 )
+
+[node name="TextureRect" type="TextureRect" parent="."]
+margin_left = -923.0
+margin_top = -939.0
+margin_right = 687.0
+margin_bottom = 418.0
+texture = ExtResource( 1 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Camera2D" type="Camera2D" parent="."]
+current = true
+
+[node name="Player" parent="." instance=ExtResource( 3 )]
+position = Vector2( -440.075, 37.392 )
+GRAVITY = 0
+
+[node name="BigScaryFish" parent="." instance=ExtResource( 5 )]
+position = Vector2( 531.593, 102.371 )
+scale = Vector2( -1, 1 )
+
+[node name="Label" type="Label" parent="."]
+margin_left = -182.646
+margin_top = -303.451
+margin_right = 193.354
+margin_bottom = -170.451
+custom_fonts/font = SubResource( 1 )
+text = "FINISHED!"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 6.0
+autostart = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+autoplay = "FadeOut"
+anims/FadeOut = SubResource( 2 )
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource( 3 )
+
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

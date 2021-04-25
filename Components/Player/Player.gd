@@ -2,16 +2,13 @@ extends KinematicBody2D
 
 enum State { 
 	CONTROLLED,
-	MOUNTED,
-	FISH,
-	ATTACKING,
 	DEAD	,
 }
 
 
 ### settings ####################################
 export var is_player = true
-export var agressive = false
+export var inverted = false
 export var GRAVITY = 50
 export var SWIM_SPEED = 15000
 export var ATTACK_SPEED = 10000
@@ -34,6 +31,7 @@ var state = State.CONTROLLED
 var oxygen_level = OXYGEN_START_LEVEL
 var oxygen_redraw_cooldown = 1
 var attack_direction = Vector2(0, 0)
+var counter = 0
 
 ###################################################
 onready var game = get_node("/root/Game")
@@ -42,38 +40,39 @@ onready var flash_light = $Visuals/Body/HandRight/Sprite/Flashlight
 onready var flash_hand = $Visuals/Body/HandRight/Sprite
 
 func _ready():
-	if !is_player:
-		state = State.FISH
-		flash_light = $Flashlight
-	else:
-		state = State.CONTROLLED
-		_on_Timer_timeout()
-		$SfxTimer.start()
+	state = State.CONTROLLED
+	_on_Timer_timeout()
+	$SfxTimer.start()
 		
 	set_physics_process(true)
 	
 func alive():
 	return state != State.DEAD
 	
+func revive_at(checkpoint):
+	position = checkpoint.position
+	state = State.CONTROLLED
+	oxygen_level = OXYGEN_START_LEVEL
+	game.update_oxygen_indicator(oxygen_level / OXYGEN_CAPACITY * 100)
+	$CPUParticles2D.emitting = true
+	$Visuals.rotation_degrees = 0
+	rotation_degrees = 0
+	$SfxTimer.start()
+	
 ################################################################################
 # PROCESSESS
 ################################################################################
 func _physics_process(delta):
 	if game.paused:
+		if Input.is_action_just_pressed("ui_accept"):
+			game.start_game()
 		return
 		
 	if [State.CONTROLLED, State.DEAD].has(state):
 		motion.y += GRAVITY * delta
 		
-	if state == State.FISH:
-		fish_process(delta)
-		
 	if state == State.CONTROLLED:
 		player_control_process(delta)
-	
-	if state == State.MOUNTED:
-		player_mounted_process(delta)
-
 		
 	if is_in_group("Player") and state != State.DEAD:
 		player_consume_oxygen(delta)
@@ -85,7 +84,7 @@ func _physics_process(delta):
 		if is_in_group("Player") and !eaten:
 			rotation_degrees += delta * 30
 	
-	if state != State.MOUNTED and !eaten:
+	if !eaten:
 		motion = move_and_slide(motion)
 
 
@@ -130,7 +129,6 @@ func player_control_process(delta):
 		target_degrees = 180
 		is_moving_y = true
 
-
 	var motion_direction = motion.normalized()
 	
 	if !is_moving_x and !is_moving_y:
@@ -166,49 +164,14 @@ func player_control_process(delta):
 		
 	motion.y = min(motion.y, MAXSPEED * delta + boost)
 
-func fish_process(delta):
-	motion.x = direction.x * SWIM_SPEED * delta
-	motion.y = lerp(motion.y, 0, delta * 3)
-
-func fish_attack_process(delta):
-	motion = attack_direction * ATTACK_SPEED * delta
-
-func player_mounted_process(delta):
-	if Input.is_action_pressed("ui_accept"):
-		unmount()
-	
-	if mounted_on:
-		position = lerp(position, mounted_on.get_node("MountPosition").global_position, delta * 8)
-
-################################################################################
 
 ################################################################################
 func object_seen(object):
-	if [State.FISH].has(state) and agressive:
-		state = State.ATTACKING
-		if object.is_in_group("Eatable") and object.state != object.State.DEAD:
-			print(" And it's eatable...")
-			attack(object)
-
-	#if state == State.CONTROLLED:
-	#	if object.is_in_group("Fish"):
-	#		print("Look! A Fish!")
-			
+	pass
+				
 func cannot_see_a_shit():
-	if state == State.ATTACKING:
-		state = State.FISH
-	if direction.x < 0:
-		flash_light.degree(-180, 1)
-	else:
-		flash_light.degree(0)
-
-func attack(object):
-	attack_direction = position.direction_to(object.position)	 
-	print("ATTACK: ", attack_direction)
-	$Tween.interpolate_property(self, 'position', position, object.position + position.direction_to(object.position) * 50, 0.6, Tween.TRANS_EXPO, Tween.EASE_OUT)
-	$Tween.start()
-	$Sfx/attack1.play()
-
+	pass
+	
 func add_oxygen(amount):
 	oxygen_level = min(OXYGEN_CAPACITY, oxygen_level + amount)
 	game.update_oxygen_indicator(oxygen_level / OXYGEN_CAPACITY * 100)
@@ -227,83 +190,23 @@ func player_consume_oxygen(delta):
 	
 	
 func die(is_eaten = false):
-	game.player_died()
+	if is_in_group("Player"):
+		game.player_died()
 	
-	$SfxTimer.stop()
-	$AnimationPlayer.stop()
-	$Visuals/Body/BoostParticles.emitting = false
-	$CPUParticles2D.emitting = false
+	if is_in_group("Player"):
+		$SfxTimer.stop()
+		$CPUParticles2D.emitting = false
+		$Visuals/Body/BoostParticles.emitting = false
+	
+	if $AnimationPlayer:
+		$AnimationPlayer.stop()
 	motion.x = 0
 	state = State.DEAD
 	
 	if is_eaten:
 		eaten = true
-		$Blood.emitting = true
-
-func eat(victim):
-	print(victim, " has been eaten... ")
-	victim.die(true)
-	var new_parent = self
-	game.remove_child(victim)
-	new_parent.add_child(victim)
-	victim.position = Vector2(0,0)
-	
-	
-func mount(driver):
-	print("mounting the player on ", driver)
-	# Let's control the fish now
-	mounted_on = driver
-	driver.state = State.CONTROLLED
-	
-	# Player will just sit down and relax
-	state = State.MOUNTED
-	collision_layer = 2
-	collision_mask = 2
-	flash_light.turn_off()
-	
-func unmount():
-	if mounted_on:
-		print("Unmounting the player...")
-		# Let fish go...
-		mounted_on.get_unmounted()
-		mounted_on = null
-		$UnmountTween.interpolate_property(self, "position", position, position - Vector2(0, 100), 0.6, Tween.TRANS_EXPO, Tween.EASE_OUT)
-		$UnmountTween.start()
-		
-func get_unmounted():
-	state = State.FISH
-	$Visuals.scale.x = 1
-	direction = Vector2(1, 0)
-	flash_light.degree(0)
-	
-func turn_around():
-	if state == State.FISH:
-		direction.x *= -1
-		$Visuals.scale.x *= -1
-		flash_light.turn_around()
-	
-func _on_HeadArea_body_entered(body):
-	if [State.ATTACKING, State.FISH].has(state):
-		if agressive and body.is_in_group("Player") and !body.eaten:
-			$AnimationPlayer.play("Attack")
-			eat(body)	
-			
-		if body is TileMap:
-			turn_around()
-
-
-func _on_TailArea_body_entered(body):
-	if body.is_in_group("Player"):
-		body.mount(self)	
-
-
-func _on_UnmountTween_tween_completed(object, key):
-		# Player is controllable again
-		state = State.CONTROLLED
-		collision_layer = 1
-		collision_mask = 1
-		flash_light.turn_on()
-
+		if $Blood:
+			$Blood.emitting = true
 
 func _on_Timer_timeout():
 	var sfx = $Sfx.get_node("bubble1") # + str(randi() % 2 + 1))

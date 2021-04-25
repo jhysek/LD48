@@ -176,9 +176,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.99817702"
-     inkscape:cx="794.47893"
-     inkscape:cy="313.02668"
+     inkscape:zoom="0.46360082"
+     inkscape:cx="3075.3423"
+     inkscape:cy="1460.0332"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      inkscape:document-rotation="0"
@@ -681,10 +681,10 @@
        inkscape:export-ydpi="237.62378" />
     <g
        id="g1514"
-       transform="translate(0.85108189,-27.566751)"
-       inkscape:export-filename="/Users/jh/code/my/games/ASSETS/LD48/some_scary_fish.png"
-       inkscape:export-xdpi="47.790001"
-       inkscape:export-ydpi="47.790001">
+       transform="translate(-35.753643,0.87230501)"
+       inkscape:export-filename="/Users/jh/code/my/games/LD48/Components/ScaryFish/scary_fish_jaw.png"
+       inkscape:export-xdpi="139.66101"
+       inkscape:export-ydpi="139.66101">
       <path
          style="fill:#000000;stroke:none;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
          d="m 256.69566,215.01629 c -5.02768,11.16533 -21.59787,15.70232 -24.34394,20.78539 -1.99837,6.1518 6.49079,-1.3367 8.44155,-2.34487 2.71043,-1.30739 21.29384,-9.98114 24.38671,-16.64862 3.09287,-6.66748 -2.28149,-4.65516 -5.08658,-5.78695 -2.80509,-1.13179 1.62993,-7.17028 -3.39774,3.99505 z"
@@ -715,67 +715,91 @@
        d="m 271.32011,190.66783 4.48292,10.67362 c 0,0 3.77986,-0.8644 4.90984,-1.92125 1.12998,-1.05685 1.58316,-2.26725 1.70778,-3.62903 0.12462,-1.36178 -1.06735,-4.05598 -1.06735,-4.05598 z"
        id="path1421"
        sodipodi:nodetypes="cczzcc"
-       inkscape:export-filename="/Users/jh/code/my/games/ASSETS/LD48/some_scary_fish.png"
-       inkscape:export-xdpi="47.790001"
-       inkscape:export-ydpi="47.790001" />
-    <g
-       id="g1526"
-       inkscape:export-filename="/Users/jh/code/my/games/ASSETS/LD48/some_scary_fish.png"
-       inkscape:export-xdpi="47.790001"
-       inkscape:export-ydpi="47.790001">
-      <path
-         style="fill:#1a1a1a;stroke:none;stroke-width:0.26458300000000001px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         d="m 230.26675,181.25886 c 0,0 5.99378,-5.91441 8.91053,-8.20706 2.91675,-2.29265 4.81942,-4.60516 8.44155,-5.6277 3.62213,-1.02254 9.52947,-0.30241 12.42784,0.46897 2.89837,0.77138 1.10743,0.87838 4.92425,2.57936 3.81682,1.70098 9.25245,4.3804 18.29001,6.80014 9.03756,2.41974 24.51679,4.87782 36.11107,6.09668 11.59428,1.21886 23.0177,1.10484 33.29723,1.40692 10.27953,0.30208 18.96098,-0.47222 28.37299,0.46898 9.41201,0.9412 27.90402,5.15872 27.90402,5.15872 0,0 -12.68534,4.34298 -22.04183,5.86219 -9.35649,1.51921 -22.15127,1.81805 -34.00068,2.11039 -11.84941,0.29234 -25.47679,0.0231 -37.04902,-0.46898 -11.57223,-0.49209 -22.4612,-1.04399 -32.35928,-2.34487 -9.89808,-1.30088 -18.06979,-2.77257 -26.96607,-5.15873 -8.89628,-2.38616 -26.26261,-9.14501 -26.26261,-9.14501 z"
-         id="path1397"
-         sodipodi:nodetypes="czzzzzzzzczzzzzc" />
-      <path
-         style="fill:#000000;stroke:none;stroke-width:0.26458300000000001px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;fill-opacity:1"
-         d="m 236.8324,183.36925 -0.46897,10.31745 c 0,0 0.76717,-4.80757 1.40692,-6.56565 0.63975,-1.75808 2.11039,-3.98629 2.11039,-3.98629 z"
-         id="path1403"
-         sodipodi:nodetypes="cczcc" />
-      <path
-         style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         d="m 230.40247,181.07843 c -2.13466,2.15163 -2.1954,4.007 -2.58136,5.90881 1.32451,-1.94163 2.28544,-3.79236 4.58364,-5.97741 z"
-         id="path1405"
-         sodipodi:nodetypes="cccc" />
-      <path
-         style="fill:#000000;stroke:none;stroke-width:0.26458300000000001px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;fill-opacity:1"
-         d="m 234.01855,182.4313 -2.11039,7.03462 3.51732,-7.26911 z"
-         id="path1407" />
-      <path
-         style="fill:#000000;stroke:none;stroke-width:0.26458300000000001px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;fill-opacity:1"
-         d="m 246.44639,185.01066 c 0,0 -2.38506,0.83002 -3.51731,2.34487 -1.13225,1.51485 -2.11039,6.80014 -2.11039,6.80014 0,0 1.88648,-4.58907 3.28283,-5.86219 1.39635,-1.27312 4.22077,-1.87589 4.22077,-1.87589 z"
-         id="path1413"
-         sodipodi:nodetypes="czczcc" />
-      <ellipse
-         style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.665001;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         id="path1415"
-         cx="245.50844"
-         cy="178.09328"
-         rx="3.7518005"
-         ry="3.6345565" />
-      <ellipse
-         style="fill:#1a1a1a;fill-opacity:1;stroke:none;stroke-width:0.665001;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         id="path1417"
-         cx="244.15149"
-         cy="178.12065"
-         rx="2.2276313"
-         ry="2.1103878" />
-      <path
-         style="fill:#1a1a1a;fill-opacity:1;stroke:none;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         d="m 240.65138,178.49236 8.59108,-4.44714 -6.26644,-0.30322 z"
-         id="path1425" />
-      <path
-         style="fill:#4d4d4d;stroke:none;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         d="m 286.09388,194.85742 c 0,0 1.18328,2.85238 12.19779,5.54445 11.01451,2.69207 39.50976,3.2824 54.55743,2.88312 15.04767,-0.39928 26.14227,-1.21425 35.48451,-3.77023 9.34224,-2.55598 20.40361,-9.31468 20.40361,-9.31468 0,0 -11.86078,4.22509 -24.83916,5.98801 -12.97838,1.76292 -36.68404,2.06587 -53.00499,1.77422 -16.32095,-0.29165 -44.79919,-3.10489 -44.79919,-3.10489 z"
-         id="path1427"
-         sodipodi:nodetypes="czzzczzc" />
-      <path
-         style="fill:#000000;stroke:#000000;stroke-width:0.24427px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         d="m 284.74809,178.72291 c 4.11716,-5.60432 9.11329,-10.42892 17.82604,-11.95651 v 3.08555 l 1.73912,1.15708 -1.30435,2.69986 2.17392,1.15708 -3.04349,1.54277 1.73914,2.31417 -4.34783,2.69985 z"
-         id="path1429"
-         sodipodi:nodetypes="cccccccccc" />
-    </g>
+       inkscape:export-filename="/Users/jh/code/my/games/LD48/Components/ScaryFish/scary_fish_body.png"
+       inkscape:export-xdpi="140.23"
+       inkscape:export-ydpi="140.23" />
+    <path
+       style="fill:#000000;stroke:none;stroke-width:0.26458300000000001px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 230.26675,181.25886 c 0,0 5.99378,-5.91441 8.91053,-8.20706 2.91675,-2.29265 4.81942,-4.60516 8.44155,-5.6277 3.62213,-1.02254 9.52947,-0.30241 12.42784,0.46897 2.89837,0.77138 1.10743,0.87838 4.92425,2.57936 3.81682,1.70098 9.25245,4.3804 18.29001,6.80014 9.03756,2.41974 24.51679,4.87782 36.11107,6.09668 11.59428,1.21886 23.0177,1.10484 33.29723,1.40692 10.27953,0.30208 18.96098,-0.47222 28.37299,0.46898 9.41201,0.9412 27.90402,5.15872 27.90402,5.15872 0,0 -12.68534,4.34298 -22.04183,5.86219 -9.35649,1.51921 -22.15127,1.81805 -34.00068,2.11039 -11.84941,0.29234 -25.47679,0.0231 -37.04902,-0.46898 -11.57223,-0.49209 -22.4612,-1.04399 -32.35928,-2.34487 -9.89808,-1.30088 -18.06979,-2.77257 -26.96607,-5.15873 -8.89628,-2.38616 -26.26261,-9.14501 -26.26261,-9.14501 z"
+       id="path1397"
+       sodipodi:nodetypes="czzzzzzzzczzzzzc"
+       inkscape:export-filename="/Users/jh/code/my/games/LD48/Components/ScaryFish/scary_fish_body.png"
+       inkscape:export-xdpi="140.23"
+       inkscape:export-ydpi="140.23" />
+    <path
+       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 236.8324,183.36925 -0.46897,10.31745 c 0,0 0.76717,-4.80757 1.40692,-6.56565 0.63975,-1.75808 2.11039,-3.98629 2.11039,-3.98629 z"
+       id="path1403"
+       sodipodi:nodetypes="cczcc"
+       inkscape:export-filename="/Users/jh/code/my/games/LD48/Components/ScaryFish/scary_fish_body.png"
+       inkscape:export-xdpi="140.23"
+       inkscape:export-ydpi="140.23" />
+    <path
+       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 230.40247,181.07843 c -2.13466,2.15163 -2.1954,4.007 -2.58136,5.90881 1.32451,-1.94163 2.28544,-3.79236 4.58364,-5.97741 z"
+       id="path1405"
+       sodipodi:nodetypes="cccc"
+       inkscape:export-filename="/Users/jh/code/my/games/LD48/Components/ScaryFish/scary_fish_body.png"
+       inkscape:export-xdpi="140.23"
+       inkscape:export-ydpi="140.23" />
+    <path
+       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 234.01855,182.4313 -2.11039,7.03462 3.51732,-7.26911 z"
+       id="path1407"
+       inkscape:export-filename="/Users/jh/code/my/games/LD48/Components/ScaryFish/scary_fish_body.png"
+       inkscape:export-xdpi="140.23"
+       inkscape:export-ydpi="140.23" />
+    <path
+       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 246.44639,185.01066 c 0,0 -2.38506,0.83002 -3.51731,2.34487 -1.13225,1.51485 -2.11039,6.80014 -2.11039,6.80014 0,0 1.88648,-4.58907 3.28283,-5.86219 1.39635,-1.27312 4.22077,-1.87589 4.22077,-1.87589 z"
+       id="path1413"
+       sodipodi:nodetypes="czczcc"
+       inkscape:export-filename="/Users/jh/code/my/games/LD48/Components/ScaryFish/scary_fish_body.png"
+       inkscape:export-xdpi="140.23"
+       inkscape:export-ydpi="140.23" />
+    <ellipse
+       style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.665001;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="path1415"
+       cx="245.50844"
+       cy="178.09328"
+       rx="3.7518005"
+       ry="3.6345565"
+       inkscape:export-filename="/Users/jh/code/my/games/LD48/Components/ScaryFish/scary_fish_body.png"
+       inkscape:export-xdpi="140.23"
+       inkscape:export-ydpi="140.23" />
+    <ellipse
+       style="fill:#1a1a1a;fill-opacity:1;stroke:none;stroke-width:0.665001;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="path1417"
+       cx="244.15149"
+       cy="178.12065"
+       rx="2.2276313"
+       ry="2.1103878"
+       inkscape:export-filename="/Users/jh/code/my/games/LD48/Components/ScaryFish/scary_fish_body.png"
+       inkscape:export-xdpi="140.23"
+       inkscape:export-ydpi="140.23" />
+    <path
+       style="fill:#1a1a1a;fill-opacity:1;stroke:none;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 240.65138,178.49236 8.59108,-4.44714 -6.26644,-0.30322 z"
+       id="path1425"
+       inkscape:export-filename="/Users/jh/code/my/games/LD48/Components/ScaryFish/scary_fish_body.png"
+       inkscape:export-xdpi="140.23"
+       inkscape:export-ydpi="140.23" />
+    <path
+       style="fill:#4d4d4d;stroke:none;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 286.09388,194.85742 c 0,0 1.18328,2.85238 12.19779,5.54445 11.01451,2.69207 39.50976,3.2824 54.55743,2.88312 15.04767,-0.39928 26.14227,-1.21425 35.48451,-3.77023 9.34224,-2.55598 20.40361,-9.31468 20.40361,-9.31468 0,0 -11.86078,4.22509 -24.83916,5.98801 -12.97838,1.76292 -36.68404,2.06587 -53.00499,1.77422 -16.32095,-0.29165 -44.79919,-3.10489 -44.79919,-3.10489 z"
+       id="path1427"
+       sodipodi:nodetypes="czzzczzc"
+       inkscape:export-filename="/Users/jh/code/my/games/LD48/Components/ScaryFish/scary_fish_body.png"
+       inkscape:export-xdpi="140.23"
+       inkscape:export-ydpi="140.23" />
+    <path
+       style="fill:#000000;stroke:#000000;stroke-width:0.24427px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 284.74809,178.72291 c 4.11716,-5.60432 9.11329,-10.42892 17.82604,-11.95651 v 3.08555 l 1.73912,1.15708 -1.30435,2.69986 2.17392,1.15708 -3.04349,1.54277 1.73914,2.31417 -4.34783,2.69985 z"
+       id="path1429"
+       sodipodi:nodetypes="cccccccccc"
+       inkscape:export-filename="/Users/jh/code/my/games/LD48/Components/ScaryFish/scary_fish_body.png"
+       inkscape:export-xdpi="140.23"
+       inkscape:export-ydpi="140.23" />
     <path
        style="fill:#000000;stroke:none;stroke-width:0.394052px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        d="m 255.99746,306.90931 c 2.68324,2.68324 9.36547,-1.75056 15.17712,0 5.81165,1.75056 10.5309,4.96171 17.70663,11.73146 7.17573,6.76975 17.65181,23.30984 22.76572,30.36372 5.11391,7.05388 5.15434,9.93787 8.22093,11.73144 3.06659,1.79357 3.8388,3.99318 6.9562,0.69012 3.1174,-3.30306 0.31577,-11.52281 -3.16191,-20.01248 -3.47768,-8.48967 -12.80473,-21.47559 -20.23618,-28.29348 -7.43145,-6.81789 -15.28696,-10.65331 -22.13332,-13.1116 -6.84636,-2.45829 -13.41561,-3.00023 -17.70664,-2.76037 -4.29103,0.23986 -6.02493,0.0229 -7.58855,2.07025 -1.56362,2.04733 -2.68324,4.9077 0,7.59094 z"
@@ -1111,125 +1135,160 @@
        inkscape:transform-center-x="44.945957"
        inkscape:transform-center-y="-3.5552071"
        transform="rotate(21.895778,517.34635,1706.0172)"
-       inkscape:export-filename="/Users/jh/code/my/games/LD48/Components/Fish/scary_big_fis_jaw.png"
-       inkscape:export-xdpi="122"
-       inkscape:export-ydpi="122">
+       inkscape:export-filename="/Users/jh/code/my/games/LD48/Components/BigScaryFish/scary_big_fis_jaw.png"
+       inkscape:export-xdpi="179.86736"
+       inkscape:export-ydpi="179.86736"
+       style="stroke:none;fill:#000000">
       <g
-         id="g1630">
+         id="g1630"
+         style="stroke:none;fill:#000000">
         <path
-           style="fill:#1a1a1a;stroke:#000000;stroke-width:0.302248px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           style="fill:#000000;stroke:none;stroke-width:0.30224800000000002px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
            d="m 313.59476,357.54048 c 0.93974,-3.22691 1.15321,-3.40354 4.24441,-4.63575 3.0912,-1.23222 9.19774,-0.80722 12.31275,1.67457 3.11502,2.48179 5.60182,6.00272 3.96008,12.00714 -1.64175,6.00443 10.3279,9.55693 2.98038,16.67185 -7.34751,7.11491 -38.92918,20.55428 -47.41926,25.45227 -8.49008,4.89797 -13.7386,6.78462 -21.08864,7.24507 -7.35005,0.46043 -16.86334,-2.27223 -20.98491,-5.1477 -4.12157,-2.87548 -5.73061,-5.41659 -5.15293,-8.10326 0.57769,-2.68667 1.11853,-3.33679 4.5315,-4.2839 3.41297,-0.94711 7.75285,3.50519 12.87212,4.14862 5.11927,0.64343 9.68944,1.42982 17.55457,-0.84459 7.86513,-2.27441 21.22559,-9.2529 27.82523,-15.08667 6.59964,-5.83376 10.73089,-11.34029 11.88675,-16.73306 1.15585,-5.39277 -4.46178,-9.13769 -3.52205,-12.36459 z"
            id="path1614"
            sodipodi:nodetypes="zzzzzzzzzzzzzzz" />
         <path
-           style="fill:#000000;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           style="fill:#000000;stroke:none;stroke-width:0.26458300000000001px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
            d="m 247.52522,402.84519 c 0,0 -3.45375,-4.17992 -8.5854,-9.50911 -5.13163,-5.32923 -7.87847,-21.16502 -7.39989,-21.21131 0,0 5.05877,12.65222 8.86708,17.94967 3.80831,5.29745 11.91249,12.5744 11.91249,12.5744 z"
            id="path1616"
            sodipodi:nodetypes="czczcc" />
         <path
-           style="fill:#000000;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           style="fill:#000000;stroke:none;stroke-width:0.26458300000000001px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
            d="m 252.36511,402.19876 c 0,0 -3.32147,-4.76082 -5.48043,-8.73987 -2.15896,-3.97906 -3.06747,-12.3604 -3.06747,-12.3604 0,0 3.87398,8.26019 6.30926,11.77941 2.43528,3.51923 6.40043,10.87923 6.40043,10.87923 z"
            id="path1618"
            sodipodi:nodetypes="czczcc" />
         <path
-           style="fill:#000000;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           style="fill:#000000;stroke:none;stroke-width:0.26458300000000001px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
            d="m 271.92094,404.40727 c 0,0 -3.32253,-8.1087 -3.56317,-11.9559 -0.24064,-3.8472 1.74668,-10.50858 1.74668,-10.50858 0,0 -0.24821,6.70427 0.75158,10.53432 0.9998,3.83005 5.61135,11.93605 5.61135,11.93605 z"
            id="path1620"
            sodipodi:nodetypes="czczcc" />
         <path
-           style="fill:#000000;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           style="fill:#000000;stroke:none;stroke-width:0.26458300000000001px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
            d="m 284.777,400.93531 c 0,0 -4.67282,-4.26355 -6.06729,-7.4352 -1.39446,-3.17165 -1.60618,-11.07558 -1.60618,-11.07558 0,0 2.52509,7.56437 4.39789,10.44899 1.8728,2.88463 6.36073,6.78288 6.36073,6.78288 z"
            id="path1622"
            sodipodi:nodetypes="czczcc" />
         <path
-           style="fill:#000000;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           style="fill:#000000;stroke:none;stroke-width:0.26458300000000001px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
            d="m 296.66747,395.77408 c 0,0 -5.60256,-3.80298 -8.16108,-6.96526 -2.55854,-3.16226 -6.51149,-12.02726 -6.51149,-12.02726 0,0 4.95262,5.72254 7.77644,8.51778 2.82381,2.79524 9.17228,8.20448 9.17228,8.20448 z"
            id="path1624"
            sodipodi:nodetypes="czczcc" />
         <path
-           style="fill:#000000;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           style="fill:#000000;stroke:none;stroke-width:0.26458300000000001px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
            d="m 262.01912,403.40414 c 0,0 -3.32148,-4.76081 -5.48044,-8.73987 -2.15896,-3.97906 -3.06747,-12.3604 -3.06747,-12.3604 0,0 3.87398,8.26019 6.30926,11.77942 2.43528,3.51922 6.40044,10.87922 6.40044,10.87922 z"
            id="path1626"
            sodipodi:nodetypes="czczcc" />
         <path
-           style="fill:#000000;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           style="fill:#000000;stroke:none;stroke-width:0.26458300000000001px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
            d="m 306.10526,390.13701 c 0,0 -5.60256,-3.80297 -8.16109,-6.96526 -2.55853,-3.16226 -6.51148,-12.02726 -6.51148,-12.02726 0,0 4.95262,5.72255 7.77643,8.51778 2.82382,2.79524 9.17229,8.20448 9.17229,8.20448 z"
            id="path1628"
            sodipodi:nodetypes="czczcc" />
       </g>
     </g>
-    <g
-       id="g1695"
-       inkscape:export-filename="/Users/jh/code/my/games/LD48/Components/Fish/scary_big_fish_body.png"
-       inkscape:export-xdpi="122"
-       inkscape:export-ydpi="122">
-      <path
-         style="fill:#1a1a1a;stroke:none;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         d="m 828.93552,279.66176 c 0,0 4.86834,-4.73954 7.0969,-6.65335 2.22856,-1.91381 2.31095,-2.57415 6.2098,-4.87913 3.89885,-2.30498 11.50443,-5.59846 17.74224,-7.54046 6.23781,-1.942 14.803,-3.63978 19.51649,-3.99201 4.71349,-0.35223 3.76796,0.37398 8.42756,0.44355 4.6596,0.0696 12.75641,-0.93749 19.51648,-0.44355 6.76007,0.49394 15.53773,2.25394 20.84716,3.54846 5.30943,1.29452 5.91105,1.85707 11.0889,3.54843 5.17785,1.69136 10.37157,1.81135 15.96805,3.10492 5.59648,1.29357 9.02653,1.73955 17.2987,5.32267 8.27217,3.58312 31.4925,25.72626 31.4925,25.72626 l 32.8232,-17.74224 c 0,0 6.2215,6.35697 6.6533,22.62137 0.4318,16.2644 16.1965,33.94758 -41.2507,19.07293 0,0 -32.92266,26.01358 -47.46057,31.49249 -14.53791,5.47891 -25.12652,4.7385 -35.92806,4.87912 -10.80154,0.14062 -21.09891,0.31969 -28.38762,-3.10488 -7.28871,-3.42457 9.12051,-8.38608 5.68924,-14.26622 -3.43127,-5.88014 -5.41425,-9.38632 -3.47144,-13.23428 1.94281,-3.84796 -19.47028,-1.20396 -17.29871,-8.42756 2.17157,-7.2236 -14.2221,-27.0678 -23.06495,-33.26675 -8.84285,-6.19895 -23.50847,-6.20977 -23.50847,-6.20977 z"
-         id="path1566"
-         sodipodi:nodetypes="czzzzzzzzzzcczczzzzzzzc" />
-      <path
-         style="fill:#000000;stroke:none;stroke-width:0.394052px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         d="m 825.45249,286.28338 c 2.68324,2.68324 9.36547,-1.75056 15.17712,0 5.81165,1.75056 10.5309,4.96171 17.70663,11.73146 7.17573,6.76975 17.65181,23.30984 22.76572,30.36372 5.11391,7.05388 5.15434,9.93787 8.22093,11.73144 3.06659,1.79357 3.8388,3.99318 6.9562,0.69012 3.1174,-3.30306 0.31577,-11.52281 -3.16191,-20.01248 -3.47768,-8.48967 -12.80473,-21.47559 -20.23618,-28.29348 -7.43145,-6.81789 -15.28696,-10.65331 -22.13332,-13.1116 -6.84636,-2.45829 -13.41561,-3.00023 -17.70664,-2.76037 -4.29103,0.23986 -6.02493,0.0229 -7.58855,2.07025 -1.56362,2.04733 -2.68324,4.9077 0,7.59094 z"
-         id="path1604"
-         sodipodi:nodetypes="zzzzzzzzzzzz" />
-      <path
-         style="fill:#000000;stroke:#000000;stroke-width:0.185458px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         d="m 857.37422,272.15736 c 0,0 -7.80412,-17.64434 -13.06696,-22.68096 -5.26286,-5.03662 -10.66567,-7.40979 -15.55593,-8.07815 -4.89026,-0.66836 -7.41736,0.57026 -11.82249,2.48559 -4.40512,1.91532 -10.14192,5.33521 -13.68921,9.63163 -3.5473,4.29644 -6.8446,15.22421 -6.8446,15.22421 0,0 -2.57546,1.3611 -3.11118,2.79628 -0.53572,1.43517 -0.35543,3.67378 0.62224,4.97117 0.97766,1.29738 3.00748,1.84776 4.35565,1.86418 1.34817,0.0164 2.33296,-0.0949 3.11118,-1.24278 0.77823,-1.1479 0.46114,-3.62903 0,-4.97117 -0.46112,-1.34215 -2.17783,-2.79628 -2.17783,-2.79628 0,0 2.36094,-6.89463 4.35567,-9.94233 1.99472,-3.04771 4.48307,-5.75428 7.46683,-8.07817 2.98375,-2.32388 6.47738,-4.78902 10.2669,-5.59256 3.78954,-0.80353 8.10379,-0.25047 11.51138,0.9321 3.40761,1.18257 5.93627,3.33663 8.40019,5.59255 2.46393,2.25594 4.30352,5.12211 6.22237,7.76745 1.91884,2.64535 3.96376,5.83476 5.28902,8.07816 1.32525,2.24339 2.80006,5.28187 2.80006,5.28187 z"
-         id="path1606"
-         sodipodi:nodetypes="czzzzczzzzzczzzzzzzcc" />
-      <path
-         style="fill:#000000;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         d="m 909.66278,330.22718 c -7.04242,5.77893 -1.998,21.18023 2.21779,29.71826 4.21579,8.53803 13.86755,16.29629 20.40359,18.18582 6.53604,1.88953 10.33532,1.71127 13.30669,-2.21777 2.97137,-3.92904 0.0184,-9.32453 -1.77422,-15.96805 -1.79258,-6.64352 -3.88654,-17.60759 -10.2018,-23.06492 -6.31526,-5.45733 -16.90963,-12.43227 -23.95205,-6.65334 z"
-         id="path1608"
-         sodipodi:nodetypes="zzzzzzz" />
-      <path
-         style="fill:#ffffff;stroke:none;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         d="m 878.17028,275.22618 c -2.01099,-0.32634 -4.58528,0.88109 -5.32268,2.66133 -0.7374,1.78024 0.27744,4.15402 1.77422,5.32268 1.49678,1.16866 4.24705,1.26066 5.76625,0.44357 1.5192,-0.81709 2.46834,-2.20288 2.21776,-3.992 -0.25058,-1.78912 -2.42456,-4.10924 -4.43555,-4.43558 z"
-         id="path1610"
-         sodipodi:nodetypes="zzzzzz" />
-      <circle
-         style="fill:#1a1a1a;fill-opacity:1;stroke:none;stroke-width:1.265;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:5.06, 5.06;stroke-dashoffset:0;stroke-opacity:1"
-         id="circle1612"
-         cx="876.98901"
-         cy="279.62271"
-         r="1.1838739" />
-      <path
-         style="fill:#000000;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         d="m 835.89543,279.93891 c 0,0 -5.11705,1.7933 -12.26451,3.70326 -7.14745,1.91 -17.68357,14.04703 -17.29781,14.33401 0,0 10.86992,-8.21673 16.8681,-10.78348 5.99816,-2.56675 16.69703,-4.60782 16.69703,-4.60782 z"
-         id="path1634"
-         sodipodi:nodetypes="czczcc" />
-      <path
-         style="fill:#000000;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         d="m 839.70467,282.99376 c 0,0 -5.30405,2.35896 -9.20883,4.64952 -3.90479,2.29055 -9.01438,8.99609 -9.01438,8.99609 0,0 7.58566,-5.06915 11.48933,-6.82323 3.90368,-1.75409 11.10214,-6.00548 11.10214,-6.00548 z"
-         id="path1636"
-         sodipodi:nodetypes="czczcc" />
-      <path
-         style="fill:#000000;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         d="m 857.58748,291.21038 c 0,0 -7.03527,5.22448 -9.22967,8.39362 -2.1944,3.16913 -3.93598,9.89894 -3.93598,9.89894 0,0 3.25255,-5.86768 6.08799,-8.62977 2.83544,-2.76209 10.97282,-7.31804 10.97282,-7.31804 z"
-         id="path1638"
-         sodipodi:nodetypes="czczcc" />
-      <path
-         style="fill:#000000;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         d="m 866.79885,300.82721 c 0,0 -6.2039,1.23483 -9.03691,3.2293 -2.83302,1.99447 -7.09936,8.65145 -7.09936,8.65145 0,0 6.07127,-5.17064 9.16544,-6.67217 3.09416,-1.50153 8.95097,-2.5192 8.95097,-2.5192 z"
-         id="path1640"
-         sodipodi:nodetypes="czczcc" />
-      <path
-         style="fill:#000000;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         d="m 874.31051,311.39114 c 0,0 -6.76178,0.36001 -10.58649,1.74483 -3.82471,1.38479 -11.79055,6.93089 -11.79055,6.93089 0,0 7.19749,-2.33924 11.0596,-3.27272 3.86211,-0.93348 12.09264,-2.28307 12.09264,-2.28307 z"
-         id="path1642"
-         sodipodi:nodetypes="czczcc" />
-      <path
-         style="fill:#000000;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         d="m 848.59226,286.95145 c 0,0 -5.30404,2.35896 -9.20883,4.64952 -3.90478,2.29055 -9.01438,8.99609 -9.01438,8.99609 0,0 7.58566,-5.06915 11.48934,-6.82323 3.90368,-1.75408 11.10213,-6.00548 11.10213,-6.00548 z"
-         id="path1644"
-         sodipodi:nodetypes="czczcc" />
-      <path
-         style="fill:#000000;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         d="m 879.47654,321.09477 c 0,0 -6.76178,0.36002 -10.58649,1.74483 -3.82471,1.38479 -11.79055,6.93089 -11.79055,6.93089 0,0 7.19749,-2.33923 11.0596,-3.27271 3.86211,-0.93348 12.09264,-2.28308 12.09264,-2.28308 z"
-         id="path1646"
-         sodipodi:nodetypes="czczcc" />
-    </g>
+    <path
+       style="fill:#000000;stroke:none;stroke-width:0.26458300000000001px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 828.93552,279.66176 c 0,0 4.86834,-4.73954 7.0969,-6.65335 2.22856,-1.91381 2.31095,-2.57415 6.2098,-4.87913 3.89885,-2.30498 11.50443,-5.59846 17.74224,-7.54046 6.23781,-1.942 14.803,-3.63978 19.51649,-3.99201 4.71349,-0.35223 3.76796,0.37398 8.42756,0.44355 4.6596,0.0696 12.75641,-0.93749 19.51648,-0.44355 6.76007,0.49394 15.53773,2.25394 20.84716,3.54846 5.30943,1.29452 5.91105,1.85707 11.0889,3.54843 5.17785,1.69136 10.37157,1.81135 15.96805,3.10492 5.59648,1.29357 9.02653,1.73955 17.2987,5.32267 8.27217,3.58312 31.4925,25.72626 31.4925,25.72626 l 32.8232,-17.74224 c 0,0 6.2215,6.35697 6.6533,22.62137 0.4318,16.2644 16.1965,33.94758 -41.2507,19.07293 0,0 -32.92266,26.01358 -47.46057,31.49249 -14.53791,5.47891 -25.12652,4.7385 -35.92806,4.87912 -10.80154,0.14062 -21.09891,0.31969 -28.38762,-3.10488 -7.28871,-3.42457 9.12051,-8.38608 5.68924,-14.26622 -3.43127,-5.88014 -5.41425,-9.38632 -3.47144,-13.23428 1.94281,-3.84796 -19.47028,-1.20396 -17.29871,-8.42756 2.17157,-7.2236 -14.2221,-27.0678 -23.06495,-33.26675 -8.84285,-6.19895 -23.50847,-6.20977 -23.50847,-6.20977 z"
+       id="path1566"
+       sodipodi:nodetypes="czzzzzzzzzzcczczzzzzzzc"
+       inkscape:export-filename="/Users/jh/code/my/games/LD48/Components/BigScaryFish/scary_big_fish_body.png"
+       inkscape:export-xdpi="179"
+       inkscape:export-ydpi="179" />
+    <path
+       style="fill:#000000;stroke:none;stroke-width:0.394052px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 825.45249,286.28338 c 2.68324,2.68324 9.36547,-1.75056 15.17712,0 5.81165,1.75056 10.5309,4.96171 17.70663,11.73146 7.17573,6.76975 17.65181,23.30984 22.76572,30.36372 5.11391,7.05388 5.15434,9.93787 8.22093,11.73144 3.06659,1.79357 3.8388,3.99318 6.9562,0.69012 3.1174,-3.30306 0.31577,-11.52281 -3.16191,-20.01248 -3.47768,-8.48967 -12.80473,-21.47559 -20.23618,-28.29348 -7.43145,-6.81789 -15.28696,-10.65331 -22.13332,-13.1116 -6.84636,-2.45829 -13.41561,-3.00023 -17.70664,-2.76037 -4.29103,0.23986 -6.02493,0.0229 -7.58855,2.07025 -1.56362,2.04733 -2.68324,4.9077 0,7.59094 z"
+       id="path1604"
+       sodipodi:nodetypes="zzzzzzzzzzzz"
+       inkscape:export-filename="/Users/jh/code/my/games/LD48/Components/BigScaryFish/scary_big_fish_body.png"
+       inkscape:export-xdpi="179"
+       inkscape:export-ydpi="179" />
+    <path
+       style="fill:#000000;stroke:#000000;stroke-width:0.185458px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 857.37422,272.15736 c 0,0 -7.80412,-17.64434 -13.06696,-22.68096 -5.26286,-5.03662 -10.66567,-7.40979 -15.55593,-8.07815 -4.89026,-0.66836 -7.41736,0.57026 -11.82249,2.48559 -4.40512,1.91532 -10.14192,5.33521 -13.68921,9.63163 -3.5473,4.29644 -6.8446,15.22421 -6.8446,15.22421 0,0 -2.57546,1.3611 -3.11118,2.79628 -0.53572,1.43517 -0.35543,3.67378 0.62224,4.97117 0.97766,1.29738 3.00748,1.84776 4.35565,1.86418 1.34817,0.0164 2.33296,-0.0949 3.11118,-1.24278 0.77823,-1.1479 0.46114,-3.62903 0,-4.97117 -0.46112,-1.34215 -2.17783,-2.79628 -2.17783,-2.79628 0,0 2.36094,-6.89463 4.35567,-9.94233 1.99472,-3.04771 4.48307,-5.75428 7.46683,-8.07817 2.98375,-2.32388 6.47738,-4.78902 10.2669,-5.59256 3.78954,-0.80353 8.10379,-0.25047 11.51138,0.9321 3.40761,1.18257 5.93627,3.33663 8.40019,5.59255 2.46393,2.25594 4.30352,5.12211 6.22237,7.76745 1.91884,2.64535 3.96376,5.83476 5.28902,8.07816 1.32525,2.24339 2.80006,5.28187 2.80006,5.28187 z"
+       id="path1606"
+       sodipodi:nodetypes="czzzzczzzzzczzzzzzzcc"
+       inkscape:export-filename="/Users/jh/code/my/games/LD48/Components/BigScaryFish/scary_big_fish_body.png"
+       inkscape:export-xdpi="179"
+       inkscape:export-ydpi="179" />
+    <path
+       style="fill:#000000;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 909.66278,330.22718 c -7.04242,5.77893 -1.998,21.18023 2.21779,29.71826 4.21579,8.53803 13.86755,16.29629 20.40359,18.18582 6.53604,1.88953 10.33532,1.71127 13.30669,-2.21777 2.97137,-3.92904 0.0184,-9.32453 -1.77422,-15.96805 -1.79258,-6.64352 -3.88654,-17.60759 -10.2018,-23.06492 -6.31526,-5.45733 -16.90963,-12.43227 -23.95205,-6.65334 z"
+       id="path1608"
+       sodipodi:nodetypes="zzzzzzz"
+       inkscape:export-filename="/Users/jh/code/my/games/LD48/Components/BigScaryFish/scary_big_fish_body.png"
+       inkscape:export-xdpi="179"
+       inkscape:export-ydpi="179" />
+    <path
+       style="fill:#ffffff;stroke:none;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 878.17028,275.22618 c -2.01099,-0.32634 -4.58528,0.88109 -5.32268,2.66133 -0.7374,1.78024 0.27744,4.15402 1.77422,5.32268 1.49678,1.16866 4.24705,1.26066 5.76625,0.44357 1.5192,-0.81709 2.46834,-2.20288 2.21776,-3.992 -0.25058,-1.78912 -2.42456,-4.10924 -4.43555,-4.43558 z"
+       id="path1610"
+       sodipodi:nodetypes="zzzzzz"
+       inkscape:export-filename="/Users/jh/code/my/games/LD48/Components/BigScaryFish/scary_big_fish_body.png"
+       inkscape:export-xdpi="179"
+       inkscape:export-ydpi="179" />
+    <circle
+       style="fill:#1a1a1a;fill-opacity:1;stroke:none;stroke-width:1.265;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:5.06, 5.06;stroke-dashoffset:0;stroke-opacity:1"
+       id="circle1612"
+       cx="876.98901"
+       cy="279.62271"
+       r="1.1838739"
+       inkscape:export-filename="/Users/jh/code/my/games/LD48/Components/BigScaryFish/scary_big_fish_body.png"
+       inkscape:export-xdpi="179"
+       inkscape:export-ydpi="179" />
+    <path
+       style="fill:#000000;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 835.89543,279.93891 c 0,0 -5.11705,1.7933 -12.26451,3.70326 -7.14745,1.91 -17.68357,14.04703 -17.29781,14.33401 0,0 10.86992,-8.21673 16.8681,-10.78348 5.99816,-2.56675 16.69703,-4.60782 16.69703,-4.60782 z"
+       id="path1634"
+       sodipodi:nodetypes="czczcc"
+       inkscape:export-filename="/Users/jh/code/my/games/LD48/Components/BigScaryFish/scary_big_fish_body.png"
+       inkscape:export-xdpi="179"
+       inkscape:export-ydpi="179" />
+    <path
+       style="fill:#000000;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 839.70467,282.99376 c 0,0 -5.30405,2.35896 -9.20883,4.64952 -3.90479,2.29055 -9.01438,8.99609 -9.01438,8.99609 0,0 7.58566,-5.06915 11.48933,-6.82323 3.90368,-1.75409 11.10214,-6.00548 11.10214,-6.00548 z"
+       id="path1636"
+       sodipodi:nodetypes="czczcc"
+       inkscape:export-filename="/Users/jh/code/my/games/LD48/Components/BigScaryFish/scary_big_fish_body.png"
+       inkscape:export-xdpi="179"
+       inkscape:export-ydpi="179" />
+    <path
+       style="fill:#000000;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 857.58748,291.21038 c 0,0 -7.03527,5.22448 -9.22967,8.39362 -2.1944,3.16913 -3.93598,9.89894 -3.93598,9.89894 0,0 3.25255,-5.86768 6.08799,-8.62977 2.83544,-2.76209 10.97282,-7.31804 10.97282,-7.31804 z"
+       id="path1638"
+       sodipodi:nodetypes="czczcc"
+       inkscape:export-filename="/Users/jh/code/my/games/LD48/Components/BigScaryFish/scary_big_fish_body.png"
+       inkscape:export-xdpi="179"
+       inkscape:export-ydpi="179" />
+    <path
+       style="fill:#000000;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 866.79885,300.82721 c 0,0 -6.2039,1.23483 -9.03691,3.2293 -2.83302,1.99447 -7.09936,8.65145 -7.09936,8.65145 0,0 6.07127,-5.17064 9.16544,-6.67217 3.09416,-1.50153 8.95097,-2.5192 8.95097,-2.5192 z"
+       id="path1640"
+       sodipodi:nodetypes="czczcc"
+       inkscape:export-filename="/Users/jh/code/my/games/LD48/Components/BigScaryFish/scary_big_fish_body.png"
+       inkscape:export-xdpi="179"
+       inkscape:export-ydpi="179" />
+    <path
+       style="fill:#000000;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 874.31051,311.39114 c 0,0 -6.76178,0.36001 -10.58649,1.74483 -3.82471,1.38479 -11.79055,6.93089 -11.79055,6.93089 0,0 7.19749,-2.33924 11.0596,-3.27272 3.86211,-0.93348 12.09264,-2.28307 12.09264,-2.28307 z"
+       id="path1642"
+       sodipodi:nodetypes="czczcc"
+       inkscape:export-filename="/Users/jh/code/my/games/LD48/Components/BigScaryFish/scary_big_fish_body.png"
+       inkscape:export-xdpi="179"
+       inkscape:export-ydpi="179" />
+    <path
+       style="fill:#000000;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 848.59226,286.95145 c 0,0 -5.30404,2.35896 -9.20883,4.64952 -3.90478,2.29055 -9.01438,8.99609 -9.01438,8.99609 0,0 7.58566,-5.06915 11.48934,-6.82323 3.90368,-1.75408 11.10213,-6.00548 11.10213,-6.00548 z"
+       id="path1644"
+       sodipodi:nodetypes="czczcc"
+       inkscape:export-filename="/Users/jh/code/my/games/LD48/Components/BigScaryFish/scary_big_fish_body.png"
+       inkscape:export-xdpi="179"
+       inkscape:export-ydpi="179" />
+    <path
+       style="fill:#000000;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 879.47654,321.09477 c 0,0 -6.76178,0.36002 -10.58649,1.74483 -3.82471,1.38479 -11.79055,6.93089 -11.79055,6.93089 0,0 7.19749,-2.33923 11.0596,-3.27271 3.86211,-0.93348 12.09264,-2.28308 12.09264,-2.28308 z"
+       id="path1646"
+       sodipodi:nodetypes="czczcc"
+       inkscape:export-filename="/Users/jh/code/my/games/LD48/Components/BigScaryFish/scary_big_fish_body.png"
+       inkscape:export-xdpi="179"
+       inkscape:export-ydpi="179" />
     <g
        id="g1732"
        transform="translate(-6.9896277,37.098793)"
@@ -1385,5 +1444,13 @@
        inkscape:export-filename="/Users/jh/code/my/games/LD48/Components/Collectable/light.png"
        inkscape:export-xdpi="199.98"
        inkscape:export-ydpi="199.98" />
+    <path
+       style="fill:#ffffff;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 759.99602,271.37403 c -1.53731,-0.0923 -3.5744,0.46041 -4.33128,1.85629 -0.75688,1.39588 0.015,3.53977 0.82499,4.74377 0.80997,1.204 2.08083,1.82557 3.30002,2.06253 1.21919,0.23696 2.44033,0.52221 3.50629,-0.61875 1.06596,-1.14096 1.39838,-4.23886 0.61875,-5.77506 -0.77963,-1.5362 -2.38146,-2.17651 -3.91877,-2.26878 z"
+       id="path1825"
+       sodipodi:nodetypes="zzzzzzz"
+       inkscape:export-filename="/Users/jh/code/my/games/LD48/Components/BigScaryFish/light_on.png"
+       inkscape:export-xdpi="179"
+       inkscape:export-ydpi="179" />
   </g>
 </svg>

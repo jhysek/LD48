@@ -1,51 +1,191 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=13 format=2]
 
-[ext_resource path="res://Components/Fish/LittleFish.png" type="Texture" id=1]
-[ext_resource path="res://Components/Player/Player.gd" type="Script" id=2]
-[ext_resource path="res://Components/Flashlight/Flashlight.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Components/BigScaryFish/scary_big_fis_jaw.png" type="Texture" id=1]
+[ext_resource path="res://Components/Player/Fish.gd" type="Script" id=2]
+[ext_resource path="res://Components/Shark/attack1.wav" type="AudioStream" id=4]
+[ext_resource path="res://Components/BigScaryFish/scary_big_fish_body.png" type="Texture" id=5]
+[ext_resource path="res://Components/Collectable/light.png" type="Texture" id=6]
+[ext_resource path="res://Components/BigScaryFish/light_on.png" type="Texture" id=7]
 
-[sub_resource type="CircleShape2D" id=1]
-radius = 46.7936
+[sub_resource type="CapsuleShape2D" id=5]
+radius = 386.505
+height = 371.747
 
-[sub_resource type="CircleShape2D" id=2]
-radius = 35.7332
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 165.971, 461.63 )
 
-[node name="Fish" type="KinematicBody2D" groups=[
+[sub_resource type="Animation" id=3]
+resource_name = "Attack"
+tracks/0/type = "value"
+tracks/0/path = NodePath("Visuals/Body/Jaw:rotation_degrees")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2 ),
+"transitions": PoolRealArray( 1, 0.329877, 1 ),
+"update": 0,
+"values": [ -23.158, -23.158, 42.9149 ]
+}
+
+[sub_resource type="Animation" id=7]
+resource_name = "Attack prep"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("Visuals/Body/Jaw:rotation_degrees")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 3 ),
+"transitions": PoolRealArray( 1.86607, 1 ),
+"update": 0,
+"values": [ 28.213, -43.9923 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Visuals/Body/Light2D:energy")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 1.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0.0, 3.0 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Visuals/Body/LightOn:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 1.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Visuals:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( -428.491, -3.82895 ), Vector2( -106.368, -136.663 ) ]
+}
+
+[sub_resource type="Animation" id=4]
+length = 2.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Visuals/Body/Jaw:rotation_degrees")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 0.535887, 1.86607 ),
+"update": 0,
+"values": [ 44.7532, 20.7689 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Visuals/Body:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.5, 1, 1.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( -1, 1 ), Vector2( -0.95, 1 ), Vector2( -1, 1 ), Vector2( -0.95, 1 ) ]
+}
+
+[sub_resource type="CircleShape2D" id=6]
+radius = 880.865
+
+[node name="BigScaryFish" type="KinematicBody2D" groups=[
 "Fish",
 ]]
 position = Vector2( 172.054, 295.084 )
 script = ExtResource( 2 )
-is_player = false
-SWIM_SPEED = 5000
-SPEED = 30000
-MAXSPEED = 30050
-
-[node name="Visuals" type="Node2D" parent="."]
-
-[node name="HeadArea" type="Area2D" parent="Visuals"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Visuals/HeadArea"]
-position = Vector2( 72.5639, 4.14651 )
-shape = SubResource( 1 )
-
-[node name="TailArea" type="Area2D" parent="Visuals"]
-position = Vector2( -63.5798, 0 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Visuals/TailArea"]
-position = Vector2( -2.07326, 4.14651 )
-shape = SubResource( 1 )
-
-[node name="Sprite" type="Sprite" parent="Visuals"]
-scale = Vector2( -0.4, 0.4 )
-texture = ExtResource( 1 )
+agressive = true
+swimming = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource( 2 )
+position = Vector2( -390.642, -6.08334 )
+rotation = -1.56848
+shape = SubResource( 5 )
 
-[node name="Flashlight" parent="." instance=ExtResource( 3 )]
+[node name="Visuals" type="Node2D" parent="."]
+position = Vector2( -428.491, -3.82895 )
+
+[node name="HeadArea" type="Area2D" parent="Visuals"]
+position = Vector2( 649.853, -0.970096 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Visuals/HeadArea"]
+position = Vector2( 140.03, 164.804 )
+shape = SubResource( 1 )
+
+[node name="Body" type="Sprite" parent="Visuals"]
+scale = Vector2( -1, 1 )
+texture = ExtResource( 5 )
+
+[node name="Light2D" type="Light2D" parent="Visuals/Body"]
+position = Vector2( -861.158, -257.737 )
+rotation = 3.14159
+scale = Vector2( 1, -1 )
+texture = ExtResource( 6 )
+texture_scale = 5.0
+energy = 0.0
+shadow_enabled = true
+
+[node name="Jaw" type="Sprite" parent="Visuals/Body"]
+position = Vector2( -201.066, 251.649 )
+rotation = 0.49241
+texture = ExtResource( 1 )
+offset = Vector2( -269.342, 28.9292 )
+
+[node name="LightOn" type="Sprite" parent="Visuals/Body"]
+modulate = Color( 1, 1, 1, 0 )
+position = Vector2( -861.158, -257.737 )
+texture = ExtResource( 7 )
 
 [node name="MountPosition" type="Position2D" parent="."]
 position = Vector2( -21.4236, -31.0988 )
 
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+autoplay = "Idle"
+anims/Attack = SubResource( 3 )
+"anims/Attack prep" = SubResource( 7 )
+anims/Idle = SubResource( 4 )
+
+[node name="Tween" type="Tween" parent="."]
+
+[node name="Sfx" type="Node" parent="."]
+
+[node name="attack1" type="AudioStreamPlayer" parent="Sfx"]
+stream = ExtResource( 4 )
+
+[node name="DetectArea" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DetectArea"]
+position = Vector2( 815.431, -197.244 )
+shape = SubResource( 6 )
+
+[node name="AttackTimer" type="Timer" parent="."]
+wait_time = 3.0
+one_shot = true
+
 [connection signal="body_entered" from="Visuals/HeadArea" to="." method="_on_HeadArea_body_entered"]
-[connection signal="body_entered" from="Visuals/TailArea" to="." method="_on_TailArea_body_entered"]
+[connection signal="body_entered" from="DetectArea" to="." method="_on_DetectArea_body_entered"]
+[connection signal="body_exited" from="DetectArea" to="." method="_on_DetectArea_body_exited"]
+[connection signal="timeout" from="AttackTimer" to="." method="_on_AttackTimer_timeout"]
