@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://Components/Player/body.png" type="Texture" id=1]
 [ext_resource path="res://Components/Player/Player.gd" type="Script" id=2]
@@ -10,6 +10,7 @@
 [ext_resource path="res://Components/Player/particle.png" type="Texture" id=8]
 [ext_resource path="res://Components/Player/bubbles2.wav" type="AudioStream" id=9]
 [ext_resource path="res://Components/Player/breathing.wav" type="AudioStream" id=10]
+[ext_resource path="res://Components/Collectable/light.png" type="Texture" id=11]
 
 [sub_resource type="Curve" id=1]
 _data = [ Vector2( 0.0860958, 0.259399 ), 0.0, -0.0745699, 0, 0, Vector2( 0.977273, 0.595238 ), -0.424602, 0.0, 0, 0 ]
@@ -80,7 +81,6 @@ colors = PoolColorArray( 0.348731, 0, 0, 1, 0.587344, 0.176818, 0.176818, 1 )
 script = ExtResource( 2 )
 
 [node name="Visuals" type="Node2D" parent="."]
-rotation = 1.5708
 scale = Vector2( 0.5, 0.5 )
 
 [node name="Body" type="Sprite" parent="Visuals"]
@@ -196,6 +196,11 @@ volume_db = -10.0
 [node name="bubble2" type="AudioStreamPlayer" parent="Sfx"]
 stream = ExtResource( 9 )
 volume_db = -10.0
+
+[node name="AmbientLight" type="Light2D" parent="."]
+texture = ExtResource( 11 )
+texture_scale = 2.0
+energy = 0.7
 
 [connection signal="tween_completed" from="UnmountTween" to="." method="_on_UnmountTween_tween_completed"]
 [connection signal="timeout" from="SfxTimer" to="." method="_on_Timer_timeout"]

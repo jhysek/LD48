@@ -20,8 +20,10 @@ export var BOOST = 30000
 export var BOOST_CONSUMPTION = 100
 export var MAXSPEED = 15050
 export var OXYGEN_CAPACITY = 300
+export var OXYGEN_START_LEVEL = 100
 #################################################
 
+var paused = true
 var motion = Vector2(0,0) 
 var attack_target
 var is_moving = false
@@ -29,7 +31,7 @@ var eaten = false
 var mounted_on 
 var direction = Vector2(1, 0)
 var state = State.CONTROLLED
-var oxygen_level = OXYGEN_CAPACITY
+var oxygen_level = OXYGEN_START_LEVEL
 var oxygen_redraw_cooldown = 1
 var attack_direction = Vector2(0, 0)
 
@@ -57,9 +59,12 @@ func alive():
 # PROCESSESS
 ################################################################################
 func _physics_process(delta):
+	if game.paused:
+		return
+		
 	if [State.CONTROLLED, State.DEAD].has(state):
 		motion.y += GRAVITY * delta
-	
+		
 	if state == State.FISH:
 		fish_process(delta)
 		
@@ -113,9 +118,12 @@ func player_control_process(delta):
 		is_moving_x = true
 	
 	if Input.is_action_pressed('ui_up'):
-		motion.y = -SPEED * delta - boost	
-		target_degrees = 0
-		is_moving_y = true
+		if position.y < -1510:
+			motion.y += GRAVITY * delta
+		else:
+			motion.y = -SPEED * delta - boost	
+			target_degrees = 0
+			is_moving_y = true
 	
 	if Input.is_action_pressed('ui_down'):
 		motion.y = SPEED * delta + boost	
@@ -176,17 +184,15 @@ func player_mounted_process(delta):
 
 ################################################################################
 func object_seen(object):
-	print("I can see something ", state)
-	if [State.FISH].has(state):
+	if [State.FISH].has(state) and agressive:
 		state = State.ATTACKING
-		print("I can see something.. ", state)
 		if object.is_in_group("Eatable") and object.state != object.State.DEAD:
 			print(" And it's eatable...")
 			attack(object)
 
-	if state == State.CONTROLLED:
-		if object.is_in_group("Fish"):
-			print("Look! A Fish!")
+	#if state == State.CONTROLLED:
+	#	if object.is_in_group("Fish"):
+	#		print("Look! A Fish!")
 			
 func cannot_see_a_shit():
 	if state == State.ATTACKING:
@@ -284,7 +290,6 @@ func _on_HeadArea_body_entered(body):
 			
 		if body is TileMap:
 			turn_around()
-			print("A WALL!")
 
 
 func _on_TailArea_body_entered(body):

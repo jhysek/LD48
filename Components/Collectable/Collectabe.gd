@@ -3,8 +3,8 @@ extends Area2D
 export var type = "oxygen"
 
 func _ready():
-	pass # Replace with function body.
-
+	$Sprite.texture = load("res://Components/Collectable/" + type + ".png")
+	
 func _on_Collectabe_body_entered(body):
 	if body.is_in_group("Player"):
 		collect(body)

@@ -5,7 +5,7 @@
 [ext_resource path="res://Components/Flashlight/Flashlight.tscn" type="PackedScene" id=3]
 
 [sub_resource type="CircleShape2D" id=1]
-radius = 46.7936
+radius = 15.343
 
 [sub_resource type="CircleShape2D" id=2]
 radius = 35.7332
@@ -25,14 +25,7 @@ MAXSPEED = 30050
 [node name="HeadArea" type="Area2D" parent="Visuals"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Visuals/HeadArea"]
-position = Vector2( 72.5639, 4.14651 )
-shape = SubResource( 1 )
-
-[node name="TailArea" type="Area2D" parent="Visuals"]
-position = Vector2( -63.5798, 0 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Visuals/TailArea"]
-position = Vector2( -2.07326, 4.14651 )
+position = Vector2( 47.2023, 1.07238 )
 shape = SubResource( 1 )
 
 [node name="Sprite" type="Sprite" parent="Visuals"]
@@ -43,6 +36,7 @@ texture = ExtResource( 1 )
 shape = SubResource( 2 )
 
 [node name="Flashlight" parent="." instance=ExtResource( 3 )]
+position = Vector2( -0.256195, 0.256165 )
 
 [node name="MountPosition" type="Position2D" parent="."]
 position = Vector2( -21.4236, -31.0988 )
@@ -50,4 +44,3 @@ position = Vector2( -21.4236, -31.0988 )
 [node name="Sfx" type="Node" parent="."]
 
 [connection signal="body_entered" from="Visuals/HeadArea" to="." method="_on_HeadArea_body_entered"]
-[connection signal="body_entered" from="Visuals/TailArea" to="." method="_on_TailArea_body_entered"]

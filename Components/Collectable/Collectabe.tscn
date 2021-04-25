@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Components/Collectable/Collectabe.gd" type="Script" id=1]
-[ext_resource path="res://icon.png" type="Texture" id=2]
+[ext_resource path="res://Components/Collectable/oxygen.png" type="Texture" id=2]
+[ext_resource path="res://Components/Collectable/light.png" type="Texture" id=3]
 
 [sub_resource type="CircleShape2D" id=1]
 radius = 72.7727
@@ -70,6 +71,70 @@ tracks/4/keys = {
 "method": "destroy"
 } ]
 }
+tracks/5/type = "value"
+tracks/5/path = NodePath("Light2D:texture_scale")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 1.0, 0.1 ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("Light2D:enabled")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0, 0.8 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("Light2D:energy")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 1.0, 0.0 ]
+}
+
+[sub_resource type="Animation" id=3]
+resource_name = "Idle"
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Light2D:texture_scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 2.0 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Light2D:energy")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 1.0, 0.5 ]
+}
 
 [node name="Collectabe" type="Area2D"]
 script = ExtResource( 1 )
@@ -81,6 +146,12 @@ shape = SubResource( 1 )
 texture = ExtResource( 2 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+autoplay = "Idle"
 anims/Collect = SubResource( 2 )
+anims/Idle = SubResource( 3 )
+
+[node name="Light2D" type="Light2D" parent="."]
+texture = ExtResource( 3 )
+shadow_enabled = true
 
 [connection signal="body_entered" from="." to="." method="_on_Collectabe_body_entered"]
