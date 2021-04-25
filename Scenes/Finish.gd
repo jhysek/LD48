@@ -13,4 +13,4 @@ func remove_fish():
 	$BigScaryFish.queue_free()
 	
 func _on_Timer_timeout():
-	Transition.switchTo("res://Scenes/Finish.tscn")
+	Transition.switchTo("res://Scenes/Game.tscn")

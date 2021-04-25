@@ -49,15 +49,7 @@ func _ready():
 func alive():
 	return state != State.DEAD
 	
-func revive_at(checkpoint):
-	position = checkpoint.position
-	state = State.CONTROLLED
-	oxygen_level = OXYGEN_START_LEVEL
-	game.update_oxygen_indicator(oxygen_level / OXYGEN_CAPACITY * 100)
-	$CPUParticles2D.emitting = true
-	$Visuals.rotation_degrees = 0
-	rotation_degrees = 0
-	$SfxTimer.start()
+
 	
 ################################################################################
 # PROCESSESS
@@ -191,7 +183,7 @@ func player_consume_oxygen(delta):
 	
 func die(is_eaten = false):
 	if is_in_group("Player"):
-		game.player_died()
+		game.player_died(self)
 	
 	if is_in_group("Player"):
 		$SfxTimer.stop()

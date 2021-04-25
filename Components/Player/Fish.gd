@@ -91,7 +91,6 @@ func cannot_see_a_shit():
 		
 func attack(object):
 	attack_direction = position.direction_to(object.position)	 
-	print("ATTACK: ", attack_direction)
 	$Tween.interpolate_property(self, 'position', position, object.position + position.direction_to(object.position) * 50, 1, Tween.TRANS_EXPO, Tween.EASE_OUT)
 	$Tween.start()
 	$Sfx/attack1.play()
@@ -113,19 +112,21 @@ func eat(victim):
 	game.remove_child(victim)
 	victim.show_behind_parent = true
 	new_parent.add_child(victim)
+	
 	victim.position = Vector2(0,0)
 	victim.collision_mask = 2
 	victim.collision_layer = 2
+	
 	state = State.FISH
 	if !victim.is_player:
 		victim.queue_free()
+	else:
+		game.player = victim
 		
 func turn_around():
 	if state == State.FISH:
 		direction.x *= -1
 		$Visuals.scale.x *= -1
-		#if flash_light:
-		#	flash_light.turn_around()
 	
 func _on_HeadArea_body_entered(body):
 	if [State.ATTACKING, State.FISH].has(state):
@@ -133,7 +134,7 @@ func _on_HeadArea_body_entered(body):
 			$AnimationPlayer.play("Attack")
 			eat(body)	
 			
-		if body is TileMap:
+		if swimming and body is TileMap:
 			turn_around()
 
 func prepare_for_attack():

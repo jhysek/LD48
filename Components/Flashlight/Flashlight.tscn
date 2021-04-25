@@ -39,16 +39,16 @@ anims/Idle = SubResource( 1 )
 [node name="Tween" type="Tween" parent="."]
 
 [node name="Ray1" type="RayCast2D" parent="."]
-rotation = -1.57593
+rotation = -1.57461
 enabled = true
 cast_to = Vector2( 0, 700 )
 
 [node name="Ray2" type="RayCast2D" parent="."]
-rotation = -1.7847
+rotation = -1.85034
 enabled = true
 cast_to = Vector2( 0, 700 )
 
 [node name="Ray3" type="RayCast2D" parent="."]
-rotation = -1.37885
+rotation = -1.30735
 enabled = true
 cast_to = Vector2( 0, 700 )
