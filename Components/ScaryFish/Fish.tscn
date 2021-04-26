@@ -6,13 +6,13 @@
 [ext_resource path="res://Components/Shark/attack1.wav" type="AudioStream" id=4]
 [ext_resource path="res://Components/ScaryFish/scary_fish_jaw.png" type="Texture" id=5]
 
-[sub_resource type="RectangleShape2D" id=6]
+[sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 51.6154, 99.8735 )
 
-[sub_resource type="RectangleShape2D" id=5]
+[sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 445.383, 42.4331 )
 
-[sub_resource type="Animation" id=4]
+[sub_resource type="Animation" id=3]
 resource_name = "Attack"
 tracks/0/type = "value"
 tracks/0/path = NodePath("Visuals/Body/Jaw:rotation_degrees")
@@ -27,8 +27,7 @@ tracks/0/keys = {
 "values": [ -23.158, -23.158, 42.9149 ]
 }
 
-[sub_resource type="Animation" id=3]
-resource_name = "Idle"
+[sub_resource type="Animation" id=4]
 length = 2.0
 loop = true
 tracks/0/type = "value"
@@ -74,7 +73,7 @@ position = Vector2( 445.862, 3.91589 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Visuals/HeadArea"]
 position = Vector2( 74.9244, -1.25446 )
-shape = SubResource( 6 )
+shape = SubResource( 1 )
 
 [node name="Body" type="Sprite" parent="Visuals"]
 scale = Vector2( -1, 1 )
@@ -88,15 +87,15 @@ offset = Vector2( -87.9249, 50.9182 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( -421.179, 25.6757 )
-shape = SubResource( 5 )
+shape = SubResource( 2 )
 
 [node name="MountPosition" type="Position2D" parent="."]
 position = Vector2( -21.4236, -31.0988 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 autoplay = "Idle"
-anims/Attack = SubResource( 4 )
-anims/Idle = SubResource( 3 )
+anims/Attack = SubResource( 3 )
+anims/Idle = SubResource( 4 )
 
 [node name="Tween" type="Tween" parent="."]
 

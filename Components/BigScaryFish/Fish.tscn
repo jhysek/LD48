@@ -7,15 +7,17 @@
 [ext_resource path="res://Components/Collectable/light.png" type="Texture" id=6]
 [ext_resource path="res://Components/BigScaryFish/light_on.png" type="Texture" id=7]
 
-[sub_resource type="CapsuleShape2D" id=5]
+[sub_resource type="CapsuleShape2D" id=1]
 radius = 386.505
 height = 371.747
 
-[sub_resource type="RectangleShape2D" id=1]
+[sub_resource type="CircleShape2D" id=2]
+radius = 880.865
+
+[sub_resource type="RectangleShape2D" id=3]
 extents = Vector2( 165.971, 461.63 )
 
-[sub_resource type="Animation" id=3]
-resource_name = "Attack"
+[sub_resource type="Animation" id=4]
 tracks/0/type = "value"
 tracks/0/path = NodePath("Visuals/Body/Jaw:rotation_degrees")
 tracks/0/interp = 1
@@ -29,7 +31,7 @@ tracks/0/keys = {
 "values": [ -23.158, -23.158, 42.9149 ]
 }
 
-[sub_resource type="Animation" id=7]
+[sub_resource type="Animation" id=5]
 resource_name = "Attack prep"
 length = 3.0
 tracks/0/type = "value"
@@ -81,7 +83,7 @@ tracks/3/keys = {
 "values": [ Vector2( -428.491, -3.82895 ), Vector2( -106.368, -136.663 ) ]
 }
 
-[sub_resource type="Animation" id=4]
+[sub_resource type="Animation" id=6]
 length = 2.0
 loop = true
 tracks/0/type = "value"
@@ -109,9 +111,6 @@ tracks/1/keys = {
 "values": [ Vector2( -1, 1 ), Vector2( -0.95, 1 ), Vector2( -1, 1 ), Vector2( -0.95, 1 ) ]
 }
 
-[sub_resource type="CircleShape2D" id=6]
-radius = 880.865
-
 [node name="BigScaryFish" type="KinematicBody2D" groups=[
 "Fish",
 ]]
@@ -123,17 +122,24 @@ swimming = false
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( -390.642, -6.08334 )
 rotation = -1.56848
-shape = SubResource( 5 )
+shape = SubResource( 1 )
 
 [node name="Visuals" type="Node2D" parent="."]
 position = Vector2( -428.491, -3.82895 )
+
+[node name="DetectArea" type="Area2D" parent="Visuals"]
+position = Vector2( 428.491, 3.82895 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Visuals/DetectArea"]
+position = Vector2( 815.431, -197.244 )
+shape = SubResource( 2 )
 
 [node name="HeadArea" type="Area2D" parent="Visuals"]
 position = Vector2( 649.853, -0.970096 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Visuals/HeadArea"]
 position = Vector2( 140.03, 164.804 )
-shape = SubResource( 1 )
+shape = SubResource( 3 )
 
 [node name="Body" type="Sprite" parent="Visuals"]
 scale = Vector2( -1, 1 )
@@ -164,9 +170,9 @@ position = Vector2( -21.4236, -31.0988 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 autoplay = "Idle"
-anims/Attack = SubResource( 3 )
-"anims/Attack prep" = SubResource( 7 )
-anims/Idle = SubResource( 4 )
+anims/Attack = SubResource( 4 )
+"anims/Attack prep" = SubResource( 5 )
+anims/Idle = SubResource( 6 )
 
 [node name="Tween" type="Tween" parent="."]
 
@@ -175,17 +181,11 @@ anims/Idle = SubResource( 4 )
 [node name="attack1" type="AudioStreamPlayer" parent="Sfx"]
 stream = ExtResource( 4 )
 
-[node name="DetectArea" type="Area2D" parent="."]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="DetectArea"]
-position = Vector2( 815.431, -197.244 )
-shape = SubResource( 6 )
-
 [node name="AttackTimer" type="Timer" parent="."]
 wait_time = 3.0
 one_shot = true
 
+[connection signal="body_entered" from="Visuals/DetectArea" to="." method="_on_DetectArea_body_entered"]
+[connection signal="body_exited" from="Visuals/DetectArea" to="." method="_on_DetectArea_body_exited"]
 [connection signal="body_entered" from="Visuals/HeadArea" to="." method="_on_HeadArea_body_entered"]
-[connection signal="body_entered" from="DetectArea" to="." method="_on_DetectArea_body_entered"]
-[connection signal="body_exited" from="DetectArea" to="." method="_on_DetectArea_body_exited"]
 [connection signal="timeout" from="AttackTimer" to="." method="_on_AttackTimer_timeout"]

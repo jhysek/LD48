@@ -1,8 +1,9 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Components/Collectable/Collectabe.gd" type="Script" id=1]
 [ext_resource path="res://Components/Collectable/oxygen.png" type="Texture" id=2]
 [ext_resource path="res://Components/Collectable/light.png" type="Texture" id=3]
+[ext_resource path="res://Components/Collectable/pick.wav" type="AudioStream" id=4]
 
 [sub_resource type="CircleShape2D" id=1]
 radius = 72.7727
@@ -156,5 +157,9 @@ texture = ExtResource( 3 )
 texture_scale = 3.0
 energy = 2.0
 shadow_enabled = true
+
+[node name="Pick" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 4 )
+volume_db = -10.0
 
 [connection signal="body_entered" from="." to="." method="_on_Collectabe_body_entered"]

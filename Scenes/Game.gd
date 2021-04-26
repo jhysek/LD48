@@ -5,12 +5,17 @@ var paused = true
 onready var player = $Player
 
 func _ready():
-	$fishies3.hide()
+	$fishes3.hide()
 	if Settings.last_checkpoint:
 		player.paused = false
 		paused = false
 		player.position = Settings.last_checkpoint.position
 		$UI/AnimationPlayer.play("Start game")
+		
+		if Settings.last_checkpoint.number >= 2:
+			if $fishies2:
+				$fishes2.queue_free()
+			$fishes3.show()
 	else:
 		$Player.paused = true
 		$Player/AnimationPlayer.play("Float")	
@@ -41,6 +46,7 @@ func _on_RestartTimer_timeout():
 func start_game():
 	if paused:
 		Settings.started = true
+		$UI/Button.queue_free()
 		$UI/AnimationPlayer.play("Start game")
 		paused = false
 
@@ -51,9 +57,20 @@ func _on_Finish_body_entered(body):
 		
 		
 func game_finished():
-	print("FINISHED")
-
+	$FinishTimer.start()
 
 func _on_FinishTimer_timeout():
 	paused = true
+	Settings.last_checkpoint = null
 	Transition.switchTo("res://Scenes/Finish.tscn")
+
+func _on_Button_mouse_entered():
+	$UI/click.play()
+
+
+func _on_Button_mouse_exited():
+	$UI/click.play()
+
+
+func _on_Button_button_down():
+	$UI/click.play()

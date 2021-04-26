@@ -6,7 +6,7 @@ func _ready():
 	$Player/AnimationPlayer.play("Float")
 	$Player/SfxTimer.start()
 	
-func player_died():
+func player_died(foo):
 	pass
 
 func remove_fish():

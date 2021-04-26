@@ -11,7 +11,8 @@ func _on_Collectabe_body_entered(body):
 
 func collect(player):
 	if type == "oxygen":
-		player.add_oxygen(40)				
+		player.add_oxygen(40)	
+	$Pick.play()			
 	$AnimationPlayer.play("Collect")
 
 func destroy():

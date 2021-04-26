@@ -120,8 +120,7 @@ func eat(victim):
 	state = State.FISH
 	if !victim.is_player:
 		victim.queue_free()
-	else:
-		game.player = victim
+
 		
 func turn_around():
 	if state == State.FISH:

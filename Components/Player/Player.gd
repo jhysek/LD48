@@ -92,7 +92,11 @@ func player_control_process(delta):
 			oxygen_level -= delta * BOOST_CONSUMPTION
 			game.update_oxygen_indicator(oxygen_level / OXYGEN_CAPACITY * 100)
 			$Visuals/Body/BoostParticles.emitting = true
+			if !$Sfx/boost.playing:
+				$Sfx/boost.play()
 		else:
+			if $Sfx/boost.playing:
+				$Sfx/boost.stop()
 			boost = 1
 			$Visuals/Body/BoostParticles.emitting = false
 	
